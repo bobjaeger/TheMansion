@@ -1,0 +1,16 @@
+Project changelog:
+
++Week2
+ - Starting plan for the project(Bobby)
+ - ask feedback for the project(Bobby)
++Week3
+ - Create first GitHub project(Bobby)
+ - Android project setup(Bobby&Dennis)
++Week4
+ - Create main menu for the game(Dennis)
+ - Planning out the story and scnario for the game(Bobby&Dennis)
+ - First meeting and discuss about the project plan(Bobby&Dennis)
++IntraTrimester Break
+ - Write the first scenario for the game(Bobby)
+ - Plan out the gamplay flow in a chart(Dennis)
++Week5
