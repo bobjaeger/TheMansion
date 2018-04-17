@@ -1,0 +1,17 @@
+{
+  "qid":100,
+  "question": "There is a paper document, what to do?",
+  "answers": [
+    {
+      "answer": "Read the document",
+      "next_qid": 101,
+      "another_dialog": "You are reading the document, it says \"PLEASE HELP ME\""
+    },
+    {
+      "answer": "Do nothing",
+      "next_qid": 102, // NULLABLE, if effect: 2(Level finished)
+      "another_dialog": "You did nothing, and suddenly wind blew the candle off", // NULLABLE
+      "effect": 0 //0: life-1, 1: life+1, 2: level finished // NULLABLE
+    }
+  ]
+}
