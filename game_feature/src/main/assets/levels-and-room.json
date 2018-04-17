@@ -1,55 +1,55 @@
 {
   "levelLG":[
     {
-      "id": 1,
+      "id": 11,
       "name": "Laboratory"
     },
     {
-      "id": 2,
+      "id": 12,
       "name": "Storage Room"
     },
     {
-      "id": 3,
+      "id": 13,
       "name": "Office"
     },
     {
-      "id": 4,
+      "id": 14,
       "name": "Security"
     }
   ],
   "levelG":[
     {
-      "id": 1,
+      "id": 21,
       "name": "Hall"
     },
     {
-      "id": 2,
+      "id": 22,
       "name": "Kitchen"
     },
     {
-      "id": 3,
+      "id": 23,
       "name": "Dining Room"
     },
     {
-      "id": 4,
+      "id": 24,
       "name": "Living Room"
     }
   ],
   "levelUG":[
     {
-      "id": 1,
+      "id": 31,
       "name": "Bed Room"
     },
     {
-      "id": 2,
+      "id": 32,
       "name": "Bath Room"
     },
     {
-      "id": 3,
+      "id": 33,
       "name": "Executive Office"
     },
     {
-      "id": 4,
+      "id": 34,
       "name": "Lounge"
     }
   ]
