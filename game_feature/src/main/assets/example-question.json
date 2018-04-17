@@ -11,7 +11,7 @@
       "answer": "Do nothing",
       "next_qid": 102, // NULLABLE, if effect: 2(Level finished)
       "another_dialog": "You did nothing, and suddenly wind blew the candle off", // NULLABLE
-      "effect": 0 //0: life-1, 1: life+1, 2: level finished // NULLABLE
+      "effect": 0 //0: life-1, 1: life+1, 2: level finished, 3: goal // NULLABLE
     }
   ]
 }
