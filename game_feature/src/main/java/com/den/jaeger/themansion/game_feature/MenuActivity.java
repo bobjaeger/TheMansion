@@ -19,12 +19,24 @@ public class MenuActivity extends AppCompatActivity {
         buttonHighScore = findViewById(R.id.buttonHighScore);
         buttonAbout = findViewById(R.id.buttonAbout);
 
+        buttonStartGame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toStartGame();
+            }
+        });
         buttonHighScore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toHighScore();
             }
         });
+    }
+
+    private void toStartGame() {
+        Intent intent = new Intent(this, Game.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
     }
 
     private void toHighScore() {
