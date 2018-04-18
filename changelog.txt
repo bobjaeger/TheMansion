@@ -14,3 +14,8 @@ Project changelog:
  - Write the first scenario for the game(Bobby)
  - Plan out the gamplay flow in a chart(Dennis)
 +Week5
+ - Working on scenario and tested out in the app(Bobby&Dennis)
++Week6
+ - Push and commit all changes(Bobby&Dennis)
+ - Create a sample game running using JSON(Bobby&Dennis)
+ - Create highscore system base on time finished(Dennis)
