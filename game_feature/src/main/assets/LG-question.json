@@ -1,0 +1,48 @@
+{
+  "qid":100,
+  "question": "check papers document?",
+  "answers": [
+    {
+      "answer": "Read",
+      "next_qid": 101,
+      "another_dialog": "there was a man that very crazy live here, CAREFULL!!",
+      "effect": 2 //0: life-1, 1: life+1, 2: room finish, 3: acquired key // NULLABLE
+    },
+    {
+      "answer": "ripped of the paper",
+      "next_qid": 101, // NULLABLE, if effect: 2(Level finished)
+      "another_dialog": "His alias name is Butcher, the one closest to Mr.Grey. And He is the one knows about Mr.Grey secret", // NULLABLE
+      "effect": 2 //0: life-1, 1: life+1, 2: room finish, 3: acquired key // NULLABLE
+    },
+    {
+      "answer": "do nothing",
+      "next_qid": 102, // NULLABLE, if effect: 2(Level finished)
+      "another_dialog": "You did nothing, and suddenly wind blew the candle off", // NULLABLE
+      "effect": 1 //0: life-1, 1: life+1, 2: room finish, 3: acquired key // NULLABLE
+    }
+  ],
+
+  "qid":102,
+  "question": "check a computer!",
+  "answers": [
+    {
+      "answer": "Press any button",
+      "next_qid": 103,
+      "another_dialog": "there was a man that very crazy live here, CAREFULL!!",
+      "effect": 2 //0: life-1, 1: life+1, 2: room finish, 3: acquired key // NULLABLE
+    },
+    {
+      "answer": "ripped of the paper",
+      "next_qid": 103, // NULLABLE, if effect: 2(Level finished)
+      "another_dialog": "His alias name is Butcher, the one closest to Mr.Grey. And He is the one knows about Mr.Grey secret", // NULLABLE
+      "effect": 2 //0: life-1, 1: life+1, 2: room finish, 3: acquired key // NULLABLE
+    },
+    {
+      "answer": "do nothing",
+      "next_qid": 103, // NULLABLE, if effect: 2(Level finished)
+      "another_dialog": "You did nothing, and suddenly wind blew the candle off", // NULLABLE
+      "effect": 2 //0: life-1, 1: life+1, 2: room finish, 3: acquired key // NULLABLE
+    }
+  ]
+
+}
