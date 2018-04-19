@@ -1,5 +1,7 @@
 package com.den.jaeger.themansion.game_feature.GameFragment;
 
+import android.app.Activity;
+import android.app.Dialog;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -10,7 +12,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -93,6 +98,13 @@ public class LobbyInterface extends Fragment {
             @Override
             public void onClick(View view) {
                 showChangeLevelDialog();
+            }
+        });
+
+        textNote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Utilities.openNote(getActivity());
             }
         });
 
