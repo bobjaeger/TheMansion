@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="#000000">
+    android:background="#000000"
+    android:padding="10dp">
 
     <EditText
         android:id="@+id/formNote"
@@ -25,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/formNote"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:weightSum="2">
 

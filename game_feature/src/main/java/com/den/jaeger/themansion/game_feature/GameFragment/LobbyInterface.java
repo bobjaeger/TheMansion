@@ -35,7 +35,7 @@ public class LobbyInterface extends Fragment {
     RelativeLayout room1, room2, room3, room4;
     View v;
     SharedPreferences prefs;
-    int floorNumber;
+    int floorNumber, lifeNumber;
 
     RoomModel room1Model, room2Model, room3Model, room4Model;
 
@@ -46,6 +46,7 @@ public class LobbyInterface extends Fragment {
         v = inflater.inflate(R.layout.fragment_lobby_interface, container, false);
         prefs = getActivity().getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
         floorNumber = prefs.getInt(Constants.PREFS_FLOOR_NUMBER, 1);
+        lifeNumber = prefs.getInt(Constants.PREFS_LIFE_NUMBER, 3);
 
         textLevelName = v.findViewById(R.id.textLevelName);
         textNote = v.findViewById(R.id.textNote);
@@ -63,6 +64,8 @@ public class LobbyInterface extends Fragment {
         room2 = v.findViewById(R.id.room2);
         room3 = v.findViewById(R.id.room3);
         room4 = v.findViewById(R.id.room4);
+
+        textLifeNumber.setText(String.valueOf(lifeNumber));
 
         parseRoom();
 

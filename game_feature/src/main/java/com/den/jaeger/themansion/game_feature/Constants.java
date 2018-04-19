@@ -7,6 +7,7 @@ public class Constants {
     public static final String PREFS = "prefs";
     public static final String PREFS_FLOOR_NUMBER = "floorNumber";
     public static final String PREFS_NOTE = "note";
+    public static final String PREFS_LIFE_NUMBER = "lifeNumber";
 
     public static final String LEVEL_NAME_LG = "Level Lower Ground";
     public static final String LEVEL_NAME_G = "Level Ground";
