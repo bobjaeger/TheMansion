@@ -15,4 +15,7 @@ public class Constants {
     public static final String LEVEL_LG = "levelLG";
     public static final String LEVEL_G = "levelG";
     public static final String LEVEL_UG = "levelUG";
+
+    public static final String FRAGMENT_LOBBY = "lobby";
+    public static final String FRAGMENT_ROOM = "room";
 }

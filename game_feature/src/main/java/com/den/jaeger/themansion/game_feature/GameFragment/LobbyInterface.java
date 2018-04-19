@@ -116,9 +116,9 @@ public class LobbyInterface extends Fragment {
         builderSingle.setTitle("Please Select Floor: ");
 
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.select_dialog_item);
-        arrayAdapter.add("Lower Ground");
-        arrayAdapter.add("Ground");
         arrayAdapter.add("Upper Ground");
+        arrayAdapter.add("Ground");
+        arrayAdapter.add("Lower Ground");
 
         builderSingle.setAdapter(arrayAdapter, new DialogInterface.OnClickListener() {
             @Override
