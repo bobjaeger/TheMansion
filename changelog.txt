@@ -19,3 +19,4 @@ Project changelog:
  - Push and commit all changes(Bobby&Dennis)
  - Create a sample game running using JSON(Bobby&Dennis)
  - Create highscore system base on time finished(Dennis)
+ - Create note for user to write(Dennis)
