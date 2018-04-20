@@ -31,6 +31,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class LobbyInterface extends Fragment {
     TextView textLevelName, textNote, textLifeNumber, textChangeLevel;
     TextView textRoom1Name, textRoom2Name, textRoom3Name, textRoom4Name;
@@ -42,6 +45,7 @@ public class LobbyInterface extends Fragment {
 
     RoomModel room1Model, room2Model, room3Model, room4Model;
 
+    Set<String> roomSet = new HashSet<>();
     String TAG = "LobbyInterface";
 
     @Override
@@ -50,6 +54,7 @@ public class LobbyInterface extends Fragment {
         prefs = getActivity().getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
         floorNumber = prefs.getInt(Constants.PREFS_FLOOR_NUMBER, 1);
         lifeNumber = prefs.getInt(Constants.PREFS_LIFE_NUMBER, 3);
+        roomSet = prefs.getStringSet(Constants.PREFS_ROOM_SET, new HashSet<String>());
 
         textLevelName = v.findViewById(R.id.textLevelName);
         textNote = v.findViewById(R.id.textNote);
@@ -155,6 +160,8 @@ public class LobbyInterface extends Fragment {
         int id = roomModel.getId();
         String roomName = roomModel.getRoomName();
         Log.d(TAG, "toRoomInterface: "+id);
+        roomSet.add(String.valueOf(id));
+        prefs.edit().putStringSet(Constants.PREFS_ROOM_SET, roomSet).commit();
 
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -187,22 +194,47 @@ public class LobbyInterface extends Fragment {
                 JSONObject obj = room.getJSONObject(i);
                 int id = obj.getInt("id");
                 String roomName = obj.getString("name");
+                boolean exist = roomSet.contains(String.valueOf(id));
                 switch(i){
                     case 0:
                         room1Model = new RoomModel(id, roomName);
                         textRoom1Name.setText(roomName);
+                        if(exist){
+                            textRoom1VisitStatus.setText("Visited");
+                        } else{
+                            textRoom1VisitStatus.setText("Unvisited");
+                            textRoom1Name.setText("?");
+                        }
                         break;
                     case 1:
                         room2Model = new RoomModel(id, roomName);
                         textRoom2Name.setText(roomName);
+                        if(exist){
+                            textRoom2VisitStatus.setText("visited");
+                        } else{
+                            textRoom2VisitStatus.setText("unvisited");
+                            textRoom2Name.setText("?");
+                        }
                         break;
                     case 2:
                         room3Model = new RoomModel(id, roomName);
                         textRoom3Name.setText(roomName);
+                        if(exist){
+                            textRoom3VisitStatus.setText("Visited");
+                        } else{
+                            textRoom3VisitStatus.setText("Unvisited");
+                            textRoom3Name.setText("?");
+                        }
                         break;
                     case 3:
                         room4Model = new RoomModel(id, roomName);
                         textRoom4Name.setText(roomName);
+                        if(exist){
+                            textRoom4VisitStatus.setText("Visited");
+                        } else{
+                            textRoom4VisitStatus.setText("Unvisited");
+                            textRoom4Name.setText("?");
+                        }
                         break;
                 }
             }
