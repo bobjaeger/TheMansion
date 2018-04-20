@@ -1,9 +1,12 @@
 package com.den.jaeger.themansion.game_feature;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -13,6 +16,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class Utilities {
+    static String TAG = "Utilities";
     public static String loadJSONFromAsset(Activity activity, String fileName) {
         String json = null;
         try {
@@ -57,5 +61,25 @@ public class Utilities {
             }
         });
         dialog.show();
+    }
+
+    public static AlertDialog.Builder showAlertDialog(Activity activity, String title, String message, DialogInterface.OnClickListener clickListener){
+        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+        builder.setMessage(message)
+                .setTitle(title);
+
+        if(clickListener==null){
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    // User clicked OK button
+                    dialog.dismiss();
+                }
+            });
+        } else{
+            Log.d(TAG, "showAlertDialog: exit");
+            builder.setPositiveButton("OK", clickListener);
+        }
+
+        return builder;
     }
 }

@@ -1,9 +1,12 @@
 package com.den.jaeger.themansion.game_feature.GameFragment;
 
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +18,7 @@ import android.widget.TextView;
 
 import com.den.jaeger.themansion.game_feature.Constants;
 import com.den.jaeger.themansion.game_feature.Game;
+import com.den.jaeger.themansion.game_feature.MenuActivity;
 import com.den.jaeger.themansion.game_feature.R;
 import com.den.jaeger.themansion.game_feature.Utilities;
 import com.den.jaeger.themansion.game_feature.model.AnswerModel;
@@ -36,6 +40,7 @@ public class RoomInterface extends Fragment {
     SharedPreferences prefs;
     int lifeNumber;
     int roomId;
+    String roomName;
     QuestionModel currentQuestion;
     String TAG = "RoomInterface";
 
@@ -45,6 +50,10 @@ public class RoomInterface extends Fragment {
 
     public void setRoomId(int roomId) {
         this.roomId = roomId;
+    }
+
+    public void setRoomName(String roomName) {
+        this.roomName = roomName;
     }
 
     @Override
@@ -69,6 +78,7 @@ public class RoomInterface extends Fragment {
         textAnswer3 = v.findViewById(R.id.textAnswer3);
         textAnswer4 = v.findViewById(R.id.textAnswer4);
 
+        textRoomName.setText(roomName);
         textLifeNumber.setText(String.valueOf(lifeNumber));
 
         textNote.setOnClickListener(new View.OnClickListener() {
@@ -87,25 +97,25 @@ public class RoomInterface extends Fragment {
         answer1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                selectAnswer(0);
             }
         });
         answer2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                selectAnswer(1);
             }
         });
         answer3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                selectAnswer(2);
             }
         });
         answer4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                selectAnswer(3);
             }
         });
 
@@ -119,6 +129,120 @@ public class RoomInterface extends Fragment {
         loadFirstQuestion();
 
         return v;
+    }
+
+    private void selectAnswer(int i) {
+        List<AnswerModel> answerModelList = currentQuestion.getAnswerLists();
+        AnswerModel answerModel = answerModelList.get(i);
+        Log.d(TAG, "selectAnswer: "+answerModel.getAnswer());
+        int nextQid = answerModel.getNextQid();
+        Log.d(TAG, "selectAnswer: nextQid: "+nextQid);
+        String anotherDialog = answerModel.getAnotherDialog();
+        int effect = answerModel.getEffect();
+        if(!anotherDialog.isEmpty()){
+            Utilities.showAlertDialog(getActivity(), Constants.MESSAGE, anotherDialog,null);
+        }
+
+        switch (effect){
+            case 1:
+                AlertDialog.Builder alertDialog = Utilities.showAlertDialog(getActivity(), Constants.MESSAGE_CANDLE_BLOWN,
+                        "You lost your life -1", null);
+                alertDialog.show();
+                decreaseLife();
+                break;
+            case 2:
+                alertDialog = Utilities.showAlertDialog(getActivity(), Constants.MESSAGE_CANDLE_ACQUIRED,
+                        "You gained your life +1", null);
+                alertDialog.show();
+                increaseLife();
+                break;
+            case 3:
+                alertDialog = Utilities.showAlertDialog(getActivity(), Constants.MESSAGE_ROOM_FINISHED,
+                        "You finished this room, you can explore the other room or explore further to get the key",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                exitRoom();
+                                dialogInterface.dismiss();
+                            }
+                        });
+                alertDialog.show();
+                break;
+            case 4:
+                alertDialog = Utilities.showAlertDialog(getActivity(), Constants.MESSAGE_KEY_ACQUIRED,
+                        "You found the key, you can now escape the mansion", null);
+                alertDialog.show();
+                break;
+        }
+        if(nextQid!=0){
+            loadQuestionById(nextQid);
+        }
+    }
+
+    private void increaseLife() {
+        lifeNumber+=1;
+        prefs.edit().putInt(Constants.PREFS_LIFE_NUMBER, lifeNumber).commit();
+
+    }
+
+    private void decreaseLife() {
+        lifeNumber-=1;
+        prefs.edit().putInt(Constants.PREFS_LIFE_NUMBER, lifeNumber).commit();
+        textLifeNumber.setText(String.valueOf(lifeNumber));
+        if(lifeNumber==0){
+            AlertDialog.Builder alertDialog = Utilities.showAlertDialog(getActivity(), Constants.MESSAGE_YOU_DIED,
+                    "...",
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Intent intent = new Intent(getActivity(), MenuActivity.class);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                            startActivity(intent);
+                            dialogInterface.dismiss();
+                        }
+                    });
+            alertDialog.show();
+        }
+    }
+
+    private void loadQuestionById(int id) {
+        String jsonFileName = Constants.JSON_QUESTION+String.valueOf(roomId)+".json";
+        try {
+            JSONArray jsonArray = new JSONArray(Utilities.loadJSONFromAsset(getActivity(), jsonFileName));
+            for(int i=0; jsonArray.length()>i; i++){
+                JSONObject obj = jsonArray.getJSONObject(i);
+                int qid = obj.getInt("qid");
+                if(qid==id){
+                    String question = obj.getString("question");
+                    JSONArray answersArray = obj.getJSONArray("answers");
+                    List<AnswerModel> answerModelList = new ArrayList<>();
+                    for(int j=0; answersArray.length()>j; j++){
+                        JSONObject answersObj = answersArray.getJSONObject(j);
+                        String answer = null;
+                        int nextQid = 0;
+                        String anotherDialog = null;
+                        int effect = 0;
+                        if(answersObj.has("answer")){
+                            answer = answersObj.getString("answer");
+                        }
+                        if(answersObj.has("next_qid")){
+                            nextQid = answersObj.getInt("next_qid");
+                        }
+                        if(answersObj.has("another_dialog")){
+                            anotherDialog = answersObj.getString("another_dialog");
+                        }
+                        if(answersObj.has("effect")){
+                            effect = answersObj.getInt("effect");
+                        }
+                        answerModelList.add(new AnswerModel(nextQid, answer, anotherDialog, effect));
+                    }
+                    currentQuestion = new QuestionModel(qid, question, answerModelList);
+                    parseQuestion();
+                }
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     private void exitRoom() {

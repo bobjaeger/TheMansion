@@ -19,4 +19,11 @@ public class Constants {
 
     public static final String FRAGMENT_LOBBY = "lobby";
     public static final String FRAGMENT_ROOM = "room";
+
+    public static final String MESSAGE = "Message";
+    public static final String MESSAGE_CANDLE_BLOWN = "Candle Blown";
+    public static final String MESSAGE_CANDLE_ACQUIRED = "Candle Acquired";
+    public static final String MESSAGE_ROOM_FINISHED = "Room Finished";
+    public static final String MESSAGE_KEY_ACQUIRED = "Key Acquired";
+    public static final String MESSAGE_YOU_DIED = "You Died";
 }

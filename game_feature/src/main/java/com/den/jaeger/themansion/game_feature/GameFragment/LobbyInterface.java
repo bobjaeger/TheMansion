@@ -153,12 +153,14 @@ public class LobbyInterface extends Fragment {
     private void toRoomInterface(RoomModel roomModel) {
         Game.currentFragment = Constants.FRAGMENT_ROOM;
         int id = roomModel.getId();
+        String roomName = roomModel.getRoomName();
         Log.d(TAG, "toRoomInterface: "+id);
 
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         RoomInterface roomInterface = new RoomInterface();
         roomInterface.setRoomId(id);
+        roomInterface.setRoomName(roomName);
         fragmentTransaction.replace(R.id.rootView, roomInterface);
         fragmentTransaction.commit();
     }
