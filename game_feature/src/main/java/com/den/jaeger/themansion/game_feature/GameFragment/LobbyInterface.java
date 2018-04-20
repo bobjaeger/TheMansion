@@ -3,6 +3,8 @@ package com.den.jaeger.themansion.game_feature.GameFragment;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
@@ -129,13 +131,13 @@ public class LobbyInterface extends Fragment {
                 String strName = arrayAdapter.getItem(i);
                 switch(i){
                     case 0:
-                        prefs.edit().putInt(Constants.PREFS_FLOOR_NUMBER, 1).commit();
+                        prefs.edit().putInt(Constants.PREFS_FLOOR_NUMBER, 3).commit();
                         break;
                     case 1:
                         prefs.edit().putInt(Constants.PREFS_FLOOR_NUMBER, 2).commit();
                         break;
                     case 2:
-                        prefs.edit().putInt(Constants.PREFS_FLOOR_NUMBER, 3).commit();
+                        prefs.edit().putInt(Constants.PREFS_FLOOR_NUMBER, 1).commit();
                         break;
                 }
                 floorNumber = prefs.getInt(Constants.PREFS_FLOOR_NUMBER, 1);
@@ -150,6 +152,16 @@ public class LobbyInterface extends Fragment {
     private void toRoomInterface(RoomModel roomModel) {
         int id = roomModel.getId();
         Log.d(TAG, "toRoomInterface: "+id);
+        toRoom(id);
+    }
+
+    private void toRoom(int id) {
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        RoomInterface roomInterface = new RoomInterface();
+        roomInterface.setRoomId(id);
+        fragmentTransaction.replace(R.id.rootView, roomInterface);
+        fragmentTransaction.commit();
     }
 
     private void parseRoom() {
