@@ -47,5 +47,5 @@
         "effect": 2 //0: life-1, 1: life+1, 2: room finish, 3: acquired key // NULLABLE
       }
     ]
-  }
+  },
 ]
