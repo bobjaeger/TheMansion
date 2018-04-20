@@ -20,6 +20,9 @@ public class Game extends AppCompatActivity {
     SharedPreferences prefs;
 
     String TAG = "Game";
+
+    public static String currentFragment = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,10 +31,11 @@ public class Game extends AppCompatActivity {
         prefs = getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
 
         readJSON(); //For example
-        toRoomInterface();
+        toLobbyInterface();
     }
 
-    private void toRoomInterface() {
+    private void toLobbyInterface() {
+        Game.currentFragment = Constants.FRAGMENT_LOBBY;
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.rootView, new LobbyInterface());
@@ -44,6 +48,15 @@ public class Game extends AppCompatActivity {
             Log.d(TAG, "readJSON: "+jsonObject);
         } catch (JSONException e) {
             e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(Game.currentFragment.equals(Constants.FRAGMENT_ROOM)){
+
+        } else{
+            super.onBackPressed();
         }
     }
 

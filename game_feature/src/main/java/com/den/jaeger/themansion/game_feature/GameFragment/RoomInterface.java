@@ -1,6 +1,8 @@
 package com.den.jaeger.themansion.game_feature.GameFragment;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,6 +14,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.den.jaeger.themansion.game_feature.Constants;
+import com.den.jaeger.themansion.game_feature.Game;
 import com.den.jaeger.themansion.game_feature.R;
 import com.den.jaeger.themansion.game_feature.Utilities;
 import com.den.jaeger.themansion.game_feature.model.AnswerModel;
@@ -106,9 +109,24 @@ public class RoomInterface extends Fragment {
             }
         });
 
+        textExitRoom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                exitRoom();
+            }
+        });
+
         loadFirstQuestion();
 
         return v;
+    }
+
+    private void exitRoom() {
+        Game.currentFragment = Constants.FRAGMENT_LOBBY;
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.rootView, new LobbyInterface());
+        fragmentTransaction.commit();
     }
 
     private void loadFirstQuestion() {

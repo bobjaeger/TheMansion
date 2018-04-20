@@ -22,6 +22,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.den.jaeger.themansion.game_feature.Constants;
+import com.den.jaeger.themansion.game_feature.Game;
 import com.den.jaeger.themansion.game_feature.R;
 import com.den.jaeger.themansion.game_feature.Utilities;
 import com.den.jaeger.themansion.game_feature.model.RoomModel;
@@ -150,12 +151,10 @@ public class LobbyInterface extends Fragment {
     }
 
     private void toRoomInterface(RoomModel roomModel) {
+        Game.currentFragment = Constants.FRAGMENT_ROOM;
         int id = roomModel.getId();
         Log.d(TAG, "toRoomInterface: "+id);
-        toRoom(id);
-    }
 
-    private void toRoom(int id) {
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         RoomInterface roomInterface = new RoomInterface();
