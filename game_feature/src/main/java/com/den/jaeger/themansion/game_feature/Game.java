@@ -29,6 +29,7 @@ public class Game extends AppCompatActivity {
         setContentView(R.layout.activity_game);
         rootView = findViewById(R.id.rootView);
         prefs = getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
+        Utilities.startGame(this);
 
         readJSON(); //For example
         toLobbyInterface();

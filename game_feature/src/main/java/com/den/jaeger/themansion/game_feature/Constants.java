@@ -9,6 +9,8 @@ public class Constants {
     public static final String PREFS_NOTE = "note";
     public static final String PREFS_LIFE_NUMBER = "lifeNumber";
     public static final String PREFS_ROOM_SET = "roomSet";
+    public static final String PREFS_TIME_START = "timeStart";
+    public static final String PREFS_NAME = "name";
 
     public static final String LEVEL_NAME_LG = "Level Lower Ground";
     public static final String LEVEL_NAME_G = "Level Ground";

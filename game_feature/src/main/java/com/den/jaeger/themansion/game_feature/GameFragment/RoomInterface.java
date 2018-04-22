@@ -186,7 +186,16 @@ public class RoomInterface extends Fragment {
                 break;
             case 4:
                 alertDialog = Utilities.showAlertDialog(getActivity(), Constants.MESSAGE_KEY_ACQUIRED,
-                        "You found the key, you can now escape the mansion", null);
+                        "You found the key, you can now escape the mansion",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Utilities.endGame(getActivity());
+                                prefs.edit().clear().commit();
+                                toMenu();
+                                dialogInterface.dismiss();
+                            }
+                        });
                 alertDialog.show();
                 break;
         }
@@ -209,14 +218,18 @@ public class RoomInterface extends Fragment {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             prefs.edit().clear().commit();
-                            Intent intent = new Intent(getActivity(), MenuActivity.class);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                            startActivity(intent);
+                            toMenu();
                             dialogInterface.dismiss();
                         }
                     });
             alertDialog.show();
         }
+    }
+
+    private void toMenu() {
+        Intent intent = new Intent(getActivity(), MenuActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
     }
 
     private void loadQuestionById(int id) {

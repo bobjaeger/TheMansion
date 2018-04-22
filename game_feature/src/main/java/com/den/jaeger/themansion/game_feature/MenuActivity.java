@@ -1,10 +1,15 @@
 package com.den.jaeger.themansion.game_feature;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -22,7 +27,7 @@ public class MenuActivity extends AppCompatActivity {
         buttonStartGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                toStartGame();
+                showNameDialog();
             }
         });
         buttonHighScore.setOnClickListener(new View.OnClickListener() {
@@ -31,6 +36,35 @@ public class MenuActivity extends AppCompatActivity {
                 toHighScore();
             }
         });
+    }
+
+    private void showNameDialog() {
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_name);
+
+        final SharedPreferences prefs =  getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
+
+        final EditText formName = dialog.findViewById(R.id.formName);
+        Button buttonClose = dialog.findViewById(R.id.buttonClose);
+        Button buttonProceed = dialog.findViewById(R.id.buttonProceed);
+
+        buttonClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
+        buttonProceed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                prefs.edit().putString(Constants.PREFS_NAME, formName.getText().toString()).commit();
+                toStartGame();
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
     }
 
     private void toStartGame() {

@@ -38,7 +38,7 @@
         "answer": "ripped of the paper",
         "next_qid": 103, // NULLABLE, if effect: 2(Level finished)
         "another_dialog": "His alias name is Butcher, the one closest to Mr.Grey. And He is the one knows about Mr.Grey secret", // NULLABLE
-        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+        "effect": 4 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
         "answer": "do nothing",

@@ -12,8 +12,14 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.den.jaeger.themansion.game_feature.DBHandler.DBHighScore;
+import com.den.jaeger.themansion.game_feature.model.HighScoreModel;
+
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 public class Utilities {
     static String TAG = "Utilities";
@@ -39,7 +45,7 @@ public class Utilities {
         dialog.setContentView(R.layout.dialog_notes);
 
         final SharedPreferences prefs =  activity.getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
-        String notes = prefs.getString(Constants.PREFS_NOTE, "");
+        String notes = prefs.getString(Constants.PREFS_NAME, "");
 
         final EditText formNote = dialog.findViewById(R.id.formNote);
         Button buttonClose = dialog.findViewById(R.id.buttonClose);
@@ -61,6 +67,26 @@ public class Utilities {
             }
         });
         dialog.show();
+    }
+
+    public static void startGame(Activity activity){
+        SharedPreferences prefs =  activity.getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
+        Date currentTime = Calendar.getInstance().getTime();
+        Log.d(TAG, "startGame: "+currentTime.getTime());
+        prefs.edit().putLong(Constants.PREFS_TIME_START, currentTime.getTime()).commit();
+    }
+
+    public static void endGame(Activity activity){
+        SharedPreferences prefs =  activity.getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
+        String name = prefs.getString(Constants.PREFS_NAME, "");
+
+        long endTime = Calendar.getInstance().getTime().getTime();
+        long startTime = prefs.getLong(Constants.PREFS_TIME_START, 0);
+        int secondsDifference = (int) TimeUnit.MILLISECONDS.toSeconds(endTime-startTime);
+        Log.d(TAG, "endGame: "+secondsDifference+" seconds");
+
+        DBHighScore dbHighScore = new DBHighScore(activity);
+        dbHighScore.addHighScore(new HighScoreModel(name, secondsDifference));
     }
 
     public static AlertDialog.Builder showAlertDialog(Activity activity, String title, String message, DialogInterface.OnClickListener clickListener){

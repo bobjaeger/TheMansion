@@ -27,8 +27,8 @@ public class HighScore extends AppCompatActivity {
         recyclerViewHighScore = findViewById(R.id.recyclerViewHighScore);
 
         dbHighScore = new DBHighScore(this);
-        dbHighScore.dropTable();
-        addDummyHighScoreToDB(); // To add dummy data comment out to disable
+        //dbHighScore.dropTable(); // To delete database
+        //addDummyHighScoreToDB(); // To add dummy data comment out to disable
 
         getHighScoreFromDB();
     }
