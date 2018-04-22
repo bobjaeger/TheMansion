@@ -67,6 +67,7 @@ public class Utilities {
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         builder.setMessage(message)
                 .setTitle(title);
+        builder.setCancelable(false);
 
         if(clickListener==null){
             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {

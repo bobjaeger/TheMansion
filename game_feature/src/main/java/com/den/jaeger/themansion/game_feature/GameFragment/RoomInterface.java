@@ -138,11 +138,27 @@ public class RoomInterface extends Fragment {
         int nextQid = answerModel.getNextQid();
         Log.d(TAG, "selectAnswer: nextQid: "+nextQid);
         String anotherDialog = answerModel.getAnotherDialog();
-        int effect = answerModel.getEffect();
+        final int effect = answerModel.getEffect();
         if(!anotherDialog.isEmpty()){
-            Utilities.showAlertDialog(getActivity(), Constants.MESSAGE, anotherDialog,null);
+            AlertDialog.Builder alertDialog = Utilities.showAlertDialog(getActivity(), Constants.MESSAGE, anotherDialog,
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            toEffect(effect);
+                            dialogInterface.dismiss();
+                        }
+                    });
+            alertDialog.show();
+        } else{
+            toEffect(effect);
         }
 
+        if(nextQid!=0){
+            loadQuestionById(nextQid);
+        }
+    }
+
+    private void toEffect(int effect) {
         switch (effect){
             case 1:
                 AlertDialog.Builder alertDialog = Utilities.showAlertDialog(getActivity(), Constants.MESSAGE_CANDLE_BLOWN,
@@ -174,9 +190,6 @@ public class RoomInterface extends Fragment {
                 alertDialog.show();
                 break;
         }
-        if(nextQid!=0){
-            loadQuestionById(nextQid);
-        }
     }
 
     private void increaseLife() {
@@ -195,6 +208,7 @@ public class RoomInterface extends Fragment {
                     new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
+                            prefs.edit().clear().commit();
                             Intent intent = new Intent(getActivity(), MenuActivity.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                             startActivity(intent);
