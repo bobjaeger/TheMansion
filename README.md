@@ -1,8 +1,9 @@
-# TheMansion
-
 # Team
 Bobby Putra	SID215339949
 Dennis Darwis SID216280619
+
+# TheMansion RPG App Game
+- The game is based on 
 
 # Henry comments 13/April
 - You've started, which is good. reply: Thanks
