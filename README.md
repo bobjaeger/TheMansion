@@ -11,3 +11,6 @@ Dennis Darwis SID216280619
 - I can't find your game's data files (e.g. JSON files)? Create a root folder "data/", and put all your text-based data files in there.
 reply: for JSON and others will be under /game_feature/src/main/assets
 need feedback: Do I need to move it to another short path?
+
+# Henry comments 27/April
+- missing compile instructions and directory explanation in readme (eg where do I find your data?)
