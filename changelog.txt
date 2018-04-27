@@ -1,4 +1,4 @@
-Project changelog:
+Project change log:
 
 +Week2
  - Starting plan for the project(Bobby)
@@ -8,15 +8,21 @@ Project changelog:
  - Android project setup(Bobby&Dennis)
 +Week4
  - Create main menu for the game(Dennis)
- - Planning out the story and scnario for the game(Bobby&Dennis)
+ - Planning out the story and scenario for the game(Bobby&Dennis)
  - First meeting and discuss about the project plan(Bobby&Dennis)
 +IntraTrimester Break
  - Write the first scenario for the game(Bobby)
- - Plan out the gamplay flow in a chart(Dennis)
+ - Plan out the gameplay flow in a chart(Dennis)
 +Week5
  - Working on scenario and tested out in the app(Bobby&Dennis)
 +Week6
  - Push and commit all changes(Bobby&Dennis)
  - Create a sample game running using JSON(Bobby&Dennis)
- - Create highscore system base on time finished(Dennis)
+ - Create high score system base on time finished(Dennis)
  - Create note for user to write(Dennis)
+ +Week7
+ - work collaborate to test the data workflow trough all the functionality(Bobby&Dennis)
+ - Fixing BUGS(Dennis)
+ - Continue develop the story in JSON data(Bobby)
+ - Find the perfect sound effect and visual graphic for the app UI/UX(Bobby)
+ - Create more functionality for the game EX: instructions to play, interaction could be added to the game and more(Dennis)
