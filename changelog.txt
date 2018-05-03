@@ -26,3 +26,6 @@ Project change log:
  - Continue develop the story in JSON data(Bobby)
  - Find the perfect sound effect and visual graphic for the app UI/UX(Bobby)
  - Create more functionality for the game EX: instructions to play, interaction could be added to the game and more(Dennis)
+ +Week8
+ - Implemented reset high score on high score activity(Dennis)
+ - Next plan: Populate the About activity, unit testing(Bobby&Dennis)
