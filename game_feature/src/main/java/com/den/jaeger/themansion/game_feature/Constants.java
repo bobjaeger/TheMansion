@@ -29,4 +29,5 @@ public class Constants {
     public static final String MESSAGE_ROOM_FINISHED = "Room Finished";
     public static final String MESSAGE_KEY_ACQUIRED = "Key Acquired";
     public static final String MESSAGE_YOU_DIED = "You Died";
+    public static final String MESSAGE_ARE_YOU_SURE = "Are you sure?";
 }
