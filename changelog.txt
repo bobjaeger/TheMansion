@@ -1,31 +1,62 @@
 Project change log:
 
 +Week2
- - Starting plan for the project(Bobby)
- - ask feedback for the project(Bobby)
+-Activity:
+  - Starting plan for the project(Bobby)
+  - ask feedback for the project(Bobby)
+-Roadblock:
+  - Managing to get partner to work on the project
+-NextPlan:
+  - Setup the project GitHub and make a schedule for collaborate work
+
 +Week3
+-Activity:
  - Create first GitHub project(Bobby)
  - Android project setup(Bobby&Dennis)
+ - Meet up and discuss about the project and availbility for the project works(Bobby&Dennis)
+-Roadblock:
+  - No Roadblock still in the plan
+-NextPlan:
+  - Early project works in following weeks, due to each personal activity outside the project
+
 +Week4
+-Activity:
  - Create main menu for the game(Dennis)
  - Planning out the story and scenario for the game(Bobby&Dennis)
  - First meeting and discuss about the project plan(Bobby&Dennis)
+-Roadblock:
+  - Managing to get partner to work on the project
+-NextPlan:
+  - Setup the project GitHub and make a schedule for collaborate work
+
 +IntraTrimester Break
+-Activity:
  - Write the first scenario for the game(Bobby)
  - Plan out the gameplay flow in a chart(Dennis)
+
 +Week5
+-Activity:
  - Working on scenario and tested out in the app(Bobby&Dennis)
+
 +Week6
+-Activity:
  - Push and commit all changes(Bobby&Dennis)
  - Create a sample game running using JSON(Bobby&Dennis)
  - Create high score system base on time finished(Dennis)
  - Create note for user to write(Dennis)
- +Week7
+
++Week7
+-Activity:
  - work collaborate to test the data workflow trough all the functionality(Bobby&Dennis)
  - Fixing BUGS(Dennis)
  - Continue develop the story in JSON data(Bobby)
  - Find the perfect sound effect and visual graphic for the app UI/UX(Bobby)
  - Create more functionality for the game EX: instructions to play, interaction could be added to the game and more(Dennis)
- +Week8
+
++Week8
+-Activity:
  - Implemented reset high score on high score activity(Dennis)
+ - Changes in story(Bobby)
+ - Planning for sounds effect and visual(Bobby&Dennis)
+ - UI/UX preparation(Bobby&Dennis)
  - Next plan: Populate the About activity, unit testing(Bobby&Dennis)
