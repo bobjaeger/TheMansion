@@ -119,7 +119,33 @@ public class LobbyInterface extends Fragment {
             }
         });
 
+        showNewPlayerTutorial();
+
         return v;
+    }
+
+    private void showNewPlayerTutorial() {
+        final SharedPreferences tutorialPrefs = getActivity().getSharedPreferences(Constants.TUTORIAL_PREFS, Context.MODE_PRIVATE);
+        boolean newPlayer = tutorialPrefs.getBoolean(Constants.TUTORIAL_PREFS_NEW_PLAYER, true);
+        if(newPlayer){
+            final Dialog dialog = new Dialog(getActivity());
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            dialog.setContentView(R.layout.dialog_tutorial);
+            Button buttonProceed = dialog.findViewById(R.id.buttonProceed);
+            TextView textName = dialog.findViewById(R.id.textName);
+            String name = prefs.getString(Constants.PREFS_NAME, "");
+
+            textName.setText(name);
+
+            buttonProceed.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    tutorialPrefs.edit().putBoolean(Constants.TUTORIAL_PREFS_NEW_PLAYER, false).commit();
+                    dialog.dismiss();
+                }
+            });
+            dialog.show();
+        }
     }
 
     private void showChangeLevelDialog() {

@@ -204,7 +204,7 @@ public class RoomInterface extends Fragment {
     private void increaseLife() {
         lifeNumber+=1;
         prefs.edit().putInt(Constants.PREFS_LIFE_NUMBER, lifeNumber).commit();
-
+        textLifeNumber.setText(String.valueOf(lifeNumber));
     }
 
     private void decreaseLife() {

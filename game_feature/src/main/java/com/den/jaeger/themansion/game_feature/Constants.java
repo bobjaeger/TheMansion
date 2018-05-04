@@ -4,6 +4,9 @@ public class Constants {
     public static final String JSON_LEVELS_ROOM = "levels-and-room.json";
     public static final String JSON_QUESTION = "question-";
 
+    public static final String TUTORIAL_PREFS = "tutorialPrefs";
+    public static final String TUTORIAL_PREFS_NEW_PLAYER = "newPlayer";
+
     public static final String PREFS = "prefs";
     public static final String PREFS_FLOOR_NUMBER = "floorNumber";
     public static final String PREFS_NOTE = "note";

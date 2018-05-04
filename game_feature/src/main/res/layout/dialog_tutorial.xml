@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#000000"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/layoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to the mansion, "
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1.	The game will introduce player about the situation first and give information about the roles how to play it.\n
+2.	As the player explores the rooms, the player can take a note and collect a key item then store in in inventory if needed.\n
+3.	Exploring the special rooms will determine who is the murderer with evidence collected by the player.\n
+4.	Until the player knows who is the murder then the murder will start to hunt down the player before player gets out of the mansion.\n
+5.	If player success to escape the mansion, there will be a story scene that tells player about the story based on evidence and hint collected.\n
+6.	But If a player died in the game, the player can see the notes that written in the game to learn. The last note created by the player will be saved on the note list that accessible on the menu screen.
+"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14dp" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutContent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/buttonProceed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="2"
+            android:background="#444422"
+            android:text="Proceed"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</RelativeLayout>

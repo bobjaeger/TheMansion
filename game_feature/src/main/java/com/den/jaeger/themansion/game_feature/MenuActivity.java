@@ -14,11 +14,15 @@ import android.widget.EditText;
 public class MenuActivity extends AppCompatActivity {
 
     Button buttonStartGame, buttonHighScore, buttonAbout;
+    SharedPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        prefs = getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
+        prefs.edit().clear().commit();
 
         buttonStartGame = findViewById(R.id.buttonStartGame);
         buttonHighScore = findViewById(R.id.buttonHighScore);
