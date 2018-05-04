@@ -4,9 +4,6 @@ public class Constants {
     public static final String JSON_LEVELS_ROOM = "levels-and-room.json";
     public static final String JSON_QUESTION = "question-";
 
-    public static final String TUTORIAL_PREFS = "tutorialPrefs";
-    public static final String TUTORIAL_PREFS_NEW_PLAYER = "newPlayer";
-
     public static final String PREFS = "prefs";
     public static final String PREFS_FLOOR_NUMBER = "floorNumber";
     public static final String PREFS_NOTE = "note";
@@ -15,6 +12,7 @@ public class Constants {
     public static final String PREFS_TIME_START = "timeStart";
     public static final String PREFS_NAME = "name";
     public static final String PREFS_VISITED_QUESTION = "visitedQuestion";
+    public static final String PREFS_TUTORIAL_READ = "tutorialRead";
 
     public static final String LEVEL_NAME_LG = "Level Lower Ground";
     public static final String LEVEL_NAME_G = "Level Ground";
@@ -34,4 +32,6 @@ public class Constants {
     public static final String MESSAGE_KEY_ACQUIRED = "Key Acquired";
     public static final String MESSAGE_YOU_DIED = "You Died";
     public static final String MESSAGE_ARE_YOU_SURE = "Are you sure?";
+    public static final String MESSAGE_EXIT_ROOM = "Exit room?";
+    public static final String MESSAGE_EXIT_GAME = "Exit game?";
 }

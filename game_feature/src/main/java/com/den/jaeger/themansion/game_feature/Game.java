@@ -1,8 +1,10 @@
 package com.den.jaeger.themansion.game_feature;
 
+import android.app.AlertDialog;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -55,9 +57,36 @@ public class Game extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         if(Game.currentFragment.equals(Constants.FRAGMENT_ROOM)){
-
-        } else{
-            super.onBackPressed();
+            final AlertDialog.Builder alertDialog = Utilities.showAlertDialog(this, Constants.MESSAGE_EXIT_ROOM,
+                    "Your progress on this room won't be saved, are you sure?", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            toLobbyInterface();
+                        }
+                    });
+            alertDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    dialogInterface.dismiss();
+                }
+            });
+            alertDialog.show();
+        } else if(Game.currentFragment.equals(Constants.FRAGMENT_LOBBY)){
+            final AlertDialog.Builder alertDialog = Utilities.showAlertDialog(this, Constants.MESSAGE_EXIT_GAME,
+                    "Your progress on this game won't be saved, are you sure?", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Game.super.onBackPressed();
+                        }
+                    });
+            alertDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    dialogInterface.dismiss();
+                }
+            });
+            alertDialog.show();
+            //super.onBackPressed();
         }
     }
 

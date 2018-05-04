@@ -125,8 +125,7 @@ public class LobbyInterface extends Fragment {
     }
 
     private void showNewPlayerTutorial() {
-        final SharedPreferences tutorialPrefs = getActivity().getSharedPreferences(Constants.TUTORIAL_PREFS, Context.MODE_PRIVATE);
-        boolean newPlayer = tutorialPrefs.getBoolean(Constants.TUTORIAL_PREFS_NEW_PLAYER, true);
+        boolean newPlayer = prefs.getBoolean(Constants.PREFS_TUTORIAL_READ, true);
         if(newPlayer){
             final Dialog dialog = new Dialog(getActivity());
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -140,10 +139,12 @@ public class LobbyInterface extends Fragment {
             buttonProceed.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    tutorialPrefs.edit().putBoolean(Constants.TUTORIAL_PREFS_NEW_PLAYER, false).commit();
+                    prefs.edit().putBoolean(Constants.PREFS_TUTORIAL_READ, false).commit();
                     dialog.dismiss();
                 }
             });
+            dialog.setCancelable(false);
+            dialog.setCanceledOnTouchOutside(false);
             dialog.show();
         }
     }
