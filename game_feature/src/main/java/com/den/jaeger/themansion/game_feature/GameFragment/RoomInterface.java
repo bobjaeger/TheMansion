@@ -29,7 +29,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class RoomInterface extends Fragment {
     View v;
@@ -42,6 +44,7 @@ public class RoomInterface extends Fragment {
     int roomId;
     String roomName;
     QuestionModel currentQuestion;
+    Set<String> visitedQuestion;
     String TAG = "RoomInterface";
 
     public int getRoomId() {
@@ -61,6 +64,7 @@ public class RoomInterface extends Fragment {
         v = inflater.inflate(R.layout.fragment_room_interface, container, false);
         prefs = getActivity().getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
         lifeNumber = prefs.getInt(Constants.PREFS_LIFE_NUMBER, 3);
+        visitedQuestion = prefs.getStringSet(Constants.PREFS_VISITED_QUESTION, new HashSet<String>());
 
         textRoomName = v.findViewById(R.id.textRoomName);
         textNote = v.findViewById(R.id.textNote);
@@ -88,12 +92,6 @@ public class RoomInterface extends Fragment {
             }
         });
 
-        textExitRoom.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
         answer1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -152,7 +150,6 @@ public class RoomInterface extends Fragment {
         } else{
             toEffect(effect);
         }
-
         if(nextQid!=0){
             loadQuestionById(nextQid);
         }
@@ -167,10 +164,19 @@ public class RoomInterface extends Fragment {
                 decreaseLife();
                 break;
             case 2:
-                alertDialog = Utilities.showAlertDialog(getActivity(), Constants.MESSAGE_CANDLE_ACQUIRED,
-                        "You gained your life +1", null);
+                String title = null;
+                String content = null;
+                if(visitedQuestion.contains(String.valueOf(currentQuestion.getQid()))){
+                    title = "Candle already acquired.";
+                    content = "No gain on life";
+                } else{
+                    title = Constants.MESSAGE_CANDLE_ACQUIRED;
+                    content = "You gained your life +1";
+                    increaseLife();
+                }
+                alertDialog = Utilities.showAlertDialog(getActivity(), title,
+                        content, null);
                 alertDialog.show();
-                increaseLife();
                 break;
             case 3:
                 alertDialog = Utilities.showAlertDialog(getActivity(), Constants.MESSAGE_ROOM_FINISHED,
@@ -199,6 +205,9 @@ public class RoomInterface extends Fragment {
                 alertDialog.show();
                 break;
         }
+        Log.d(TAG, "selectAnswer: "+visitedQuestion+", "+currentQuestion.getQid());
+        visitedQuestion.add(String.valueOf(currentQuestion.getQid()));
+        prefs.edit().putStringSet(Constants.PREFS_VISITED_QUESTION, visitedQuestion).commit();
     }
 
     private void increaseLife() {
