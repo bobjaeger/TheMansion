@@ -100,6 +100,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:text="Room 1 Name"
+                        android:textAlignment="center"
                         android:textSize="16dp" />
 
                 </RelativeLayout>
@@ -118,6 +119,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:text="Room 2 Name"
+                        android:textAlignment="center"
                         android:textSize="16dp" />
 
                 </RelativeLayout>
@@ -147,6 +149,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:text="Room 3 Name"
+                        android:textAlignment="center"
                         android:textSize="16dp" />
 
                 </RelativeLayout>
@@ -165,6 +168,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:text="Room 4 Name"
+                        android:textAlignment="center"
                         android:textSize="16dp" />
 
                 </RelativeLayout>

@@ -282,11 +282,24 @@ public class RoomInterface extends Fragment {
     }
 
     private void exitRoom() {
-        Game.currentFragment = Constants.FRAGMENT_LOBBY;
-        FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.rootView, new LobbyInterface());
-        fragmentTransaction.commit();
+        final AlertDialog.Builder alertDialog = Utilities.showAlertDialog(getActivity(), Constants.MESSAGE_EXIT_GAME,
+                "Your progress on this game won't be saved, are you sure?", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Game.currentFragment = Constants.FRAGMENT_LOBBY;
+                        FragmentManager fragmentManager = getFragmentManager();
+                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.rootView, new LobbyInterface());
+                        fragmentTransaction.commit();
+                    }
+                });
+        alertDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+        alertDialog.show();
     }
 
     private void loadFirstQuestion() {

@@ -201,6 +201,10 @@ public class LobbyInterface extends Fragment {
 
     private void parseRoom() {
         try {
+            room1.setVisibility(View.INVISIBLE);
+            room2.setVisibility(View.INVISIBLE);
+            room3.setVisibility(View.INVISIBLE);
+            room4.setVisibility(View.INVISIBLE);
             JSONObject jsonObject = new JSONObject(Utilities.loadJSONFromAsset(getActivity(), Constants.JSON_LEVELS_ROOM));
             JSONArray room = new JSONArray();
             switch(floorNumber){
@@ -224,6 +228,7 @@ public class LobbyInterface extends Fragment {
                 boolean exist = roomSet.contains(String.valueOf(id));
                 switch(i){
                     case 0:
+                        room1.setVisibility(View.VISIBLE);
                         room1Model = new RoomModel(id, roomName);
                         textRoom1Name.setText(roomName);
                         if(exist){
@@ -234,6 +239,7 @@ public class LobbyInterface extends Fragment {
                         }
                         break;
                     case 1:
+                        room2.setVisibility(View.VISIBLE);
                         room2Model = new RoomModel(id, roomName);
                         textRoom2Name.setText(roomName);
                         if(exist){
@@ -244,6 +250,7 @@ public class LobbyInterface extends Fragment {
                         }
                         break;
                     case 2:
+                        room3.setVisibility(View.VISIBLE);
                         room3Model = new RoomModel(id, roomName);
                         textRoom3Name.setText(roomName);
                         if(exist){
@@ -254,6 +261,7 @@ public class LobbyInterface extends Fragment {
                         }
                         break;
                     case 3:
+                        room4.setVisibility(View.VISIBLE);
                         room4Model = new RoomModel(id, roomName);
                         textRoom4Name.setText(roomName);
                         if(exist){
