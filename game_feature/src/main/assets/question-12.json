@@ -1,7 +1,7 @@
-[
+[//STORAGE ROOM
   {
-    "qid":100,
-    "question": "check papers document?",
+    "qid":120,
+    "question": "Opened Box",
     "answers": [
       {
         "answer": "Read",
@@ -14,19 +14,13 @@
         "next_qid": 100,
         "another_dialog": "He used to be called the Butcher, and the one has closest connection to Mr. Grey. He the only knows about Mr. Grey secret.", // NULLABLE
         "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "do nothing",
-        "next_qid": 101,
-        "another_dialog": "meanwhile staring at… wind blew up the candle", // NULLABLE
-        "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   },
 
   {
-    "qid":101,
-    "question": "check a computer!",
+    "qid":121,
+    "question": "Un-opened Box",
     "answers": [
       {
         "answer": "Press any button",
@@ -39,12 +33,6 @@
         "next_qid": 103,
         "another_dialog": "Screen message – Don’t ever touch the computer", // NULLABLE
         "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "turned off the computer",
-        "next_qid": 101,
-        "another_dialog": "showed up new message – don’t even try to know who am I", // NULLABLE
-        "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   }
