@@ -31,7 +31,7 @@
   },
 
   {
-    "qid":111,
+    "qid":111, //REDLIQUID
     "question": "after drink red liquid, I feel like see a red object things in this room",
     "answers": [
       {
@@ -50,7 +50,7 @@
   },
 
   {
-    "qid":113,
+    "qid":113, //GREENPOWDER
     "question": "check a computer!",
     "answers": [
       {
@@ -75,7 +75,32 @@
   },
 
   {
-    "qid":114,
+    "qid":114, //BLUEHERB
+    "question": "check a computer!",
+    "answers": [
+      {
+        "answer": "Press any button",
+        "next_qid": 102,
+        "another_dialog": "Computer turned on from sleep",
+        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+      },
+      {
+        "answer": "read on the screen message",
+        "next_qid": 103,
+        "another_dialog": "Screen message – Don’t ever touch the computer", // NULLABLE
+        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+      },
+      {
+        "answer": "turned off the computer",
+        "next_qid": 101,
+        "another_dialog": "showed up new message – don’t even try to know who am I", // NULLABLE
+        "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+      }
+    ]
+  },
+
+  {
+    "qid":114, //PURPLELIQUID
     "question": "check a computer!",
     "answers": [
       {

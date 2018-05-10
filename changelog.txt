@@ -33,10 +33,20 @@ Project change log:
 -Activity:
  - Write the first scenario for the game(Bobby)
  - Plan out the gameplay flow in a chart(Dennis)
+-Roadblock:
+ - No physical meeting
+-NextPlan:
+ - Create more scenario for the game, and define the gameplay experience
 
 +Week5
 -Activity:
  - Working on scenario and tested out in the app(Bobby&Dennis)
+-Roadblock:
+ - No development both of us have another important activity on another subject
+-NextPlan:
+ - Done with the scenarios
+ - Implement basic feature for the game to run
+ - Small UI design as start
 
 +Week6
 -Activity:
@@ -44,6 +54,11 @@ Project change log:
  - Create a sample game running using JSON(Bobby&Dennis)
  - Create high score system base on time finished(Dennis)
  - Create note for user to write(Dennis)
+-Roadblock:
+ - not enough story in the scenario to test the app
+ - bugs
+-NextPlan:
+ - add more game feature
 
 +Week7
 -Activity:
@@ -52,6 +67,10 @@ Project change log:
  - Continue develop the story in JSON data(Bobby)
  - Find the perfect sound effect and visual graphic for the app UI/UX(Bobby)
  - Create more functionality for the game EX: instructions to play, interaction could be added to the game and more(Dennis)
+-Roadblock:
+ - to much idea, need to be focus on the basic for the game to run smoothly
+-NextPlan:
+ - getting into on track with the first plan
 
 +Week8
 -Activity:
@@ -60,11 +79,30 @@ Project change log:
  - Planning for sounds effect and visual(Bobby&Dennis)
  - UI/UX preparation(Bobby&Dennis)
  - Next plan: Populate the About activity, unit testing(Bobby&Dennis)
+-Roadblock:
+ - licensing issue
+ - not enough visual on the app
+ - app crash because of JSON data
+-NextPlan:
+ - try to put some visual and sounds effect to the app
+ - UI at least have a color and shape for button become noticeable
 
- +Week9
- -Activity:
-  - Implemented tutorial dialog(Dennis)
-  - Found issues on sharedpreferences issues, fixed(Dennis)
-  - Implemented dialog when the player leaves room or game(Dennis)
-  - Made few changes so the number of rooms on each levels can be 1-4(Dennis)
-  - Next plan: Sound placement for each activity(Bobby&Dennis)
++Week9
+-Activity:
+ - create and implemented tutorial dialog before start of the game(Bobby&Dennis)
+ - New game data JSON for each room in level, made some changes(Bobby)
+ - Found issues on sharedpreferences issues, fixed(Dennis)
+ - Implemented dialog when the player leaves room or game(Dennis)
+ - Plan to have new/update feature on the game(Bobby)
+ - trying modify the current UI(Bobby)
+ - Made few changes so the number of rooms on each levels can be 1-4(Dennis)
+ - On Progress sound placement for each activity/button(Bobby&Dennis)
+-Roadblock:
+ - sounds effect and visual size
+ - sounds effect format
+ - plan to make the app still be able render all data from any JSON
+-NextPlan:
+ - video record for the app
+ - update game instruction
+ - finalize app
+ - find bugs

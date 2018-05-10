@@ -1,0 +1,9 @@
+1879 - Footsteps - Wooden Stairs - Down - 80 fpm - Loop = move_LVL
+Creepy Door, Fast Metal Creak_02 = room_door
+turn_page_thick_magazine_002 = open_note
+shut_small_book_002 = close_note
+Hand-to-Hand Combat - Body Hits - Body Slam Floor 08 = answer
+torch_whoosh_20 = life_minus
+Coffee, Grinder, Knob, Turn, Click X3 [MIX] sm-fire-cotton-02-8040 = life_plus
+Coins_Hand_Jingle_Movement_Takes_6 = key
+whoosh_weapon_knife_swing_04 [MIX] Breathe 6 = death
