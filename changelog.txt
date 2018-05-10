@@ -60,3 +60,11 @@ Project change log:
  - Planning for sounds effect and visual(Bobby&Dennis)
  - UI/UX preparation(Bobby&Dennis)
  - Next plan: Populate the About activity, unit testing(Bobby&Dennis)
+
+ +Week9
+ -Activity:
+  - Implemented tutorial dialog(Dennis)
+  - Found issues on sharedpreferences issues, fixed(Dennis)
+  - Implemented dialog when the player leaves room or game(Dennis)
+  - Made few changes so the number of rooms on each levels can be 1-4(Dennis)
+  - Next plan: Sound placement for each activity(Bobby&Dennis)
