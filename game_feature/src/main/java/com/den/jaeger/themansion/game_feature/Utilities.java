@@ -40,13 +40,15 @@ public class Utilities {
         return json;
     }
 
-    public static void openNote(Activity activity) {
+    public static void openNote(final Activity activity) {
+        Utilities.playSound(activity, Constants.AUDIO_OPEN_NOTE);
+
         final Dialog dialog = new Dialog(activity);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dialog_notes);
 
         final SharedPreferences prefs =  activity.getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
-        String notes = prefs.getString(Constants.PREFS_NAME, "");
+        String notes = prefs.getString(Constants.PREFS_NOTE, "");
 
         final EditText formNote = dialog.findViewById(R.id.formNote);
         Button buttonClose = dialog.findViewById(R.id.buttonClose);
@@ -56,6 +58,8 @@ public class Utilities {
         buttonClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Utilities.playSound(activity, Constants.AUDIO_CLOSE_NOTE);
+
                 dialog.dismiss();
             }
         });
@@ -63,6 +67,8 @@ public class Utilities {
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Utilities.playSound(activity, Constants.AUDIO_CLOSE_NOTE);
+
                 prefs.edit().putString(Constants.PREFS_NOTE, formNote.getText().toString()).commit();
                 dialog.dismiss();
             }

@@ -120,7 +120,7 @@ public class RoomInterface extends Fragment {
         textExitRoom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                exitRoom();
+                showExitRoomDialog();
             }
         });
 
@@ -130,6 +130,8 @@ public class RoomInterface extends Fragment {
     }
 
     private void selectAnswer(int i) {
+        Utilities.playSound(getActivity(), Constants.AUDIO_ANSWER);
+
         List<AnswerModel> answerModelList = currentQuestion.getAnswerLists();
         AnswerModel answerModel = answerModelList.get(i);
         Log.d(TAG, "selectAnswer: "+answerModel.getAnswer());
@@ -170,6 +172,8 @@ public class RoomInterface extends Fragment {
                     title = "Candle already acquired.";
                     content = "No gain on life";
                 } else{
+                    Utilities.playSound(getActivity(), Constants.AUDIO_LIFE_PLUS);
+
                     title = Constants.MESSAGE_CANDLE_ACQUIRED;
                     content = "You gained your life +1";
                     increaseLife();
@@ -191,6 +195,8 @@ public class RoomInterface extends Fragment {
                 alertDialog.show();
                 break;
             case 4:
+                Utilities.playSound(getActivity(), Constants.AUDIO_KEY);
+
                 alertDialog = Utilities.showAlertDialog(getActivity(), Constants.MESSAGE_KEY_ACQUIRED,
                         "You found the key, you can now escape the mansion",
                         new DialogInterface.OnClickListener() {
@@ -211,6 +217,8 @@ public class RoomInterface extends Fragment {
     }
 
     private void increaseLife() {
+        Utilities.playSound(getActivity(), Constants.AUDIO_LIFE_PLUS);
+
         lifeNumber+=1;
         prefs.edit().putInt(Constants.PREFS_LIFE_NUMBER, lifeNumber).commit();
         textLifeNumber.setText(String.valueOf(lifeNumber));
@@ -221,6 +229,7 @@ public class RoomInterface extends Fragment {
         prefs.edit().putInt(Constants.PREFS_LIFE_NUMBER, lifeNumber).commit();
         textLifeNumber.setText(String.valueOf(lifeNumber));
         if(lifeNumber==0){
+            Utilities.playSound(getActivity(), Constants.AUDIO_DEATH);
             AlertDialog.Builder alertDialog = Utilities.showAlertDialog(getActivity(), Constants.MESSAGE_YOU_DIED,
                     "...",
                     new DialogInterface.OnClickListener() {
@@ -232,6 +241,8 @@ public class RoomInterface extends Fragment {
                         }
                     });
             alertDialog.show();
+        } else{
+            Utilities.playSound(getActivity(), Constants.AUDIO_LIFE_MINUS);
         }
     }
 
@@ -282,15 +293,19 @@ public class RoomInterface extends Fragment {
     }
 
     private void exitRoom() {
+        Game.currentFragment = Constants.FRAGMENT_LOBBY;
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.rootView, new LobbyInterface());
+        fragmentTransaction.commit();
+    }
+
+    private void showExitRoomDialog(){
         final AlertDialog.Builder alertDialog = Utilities.showAlertDialog(getActivity(), Constants.MESSAGE_EXIT_GAME,
                 "Your progress on this game won't be saved, are you sure?", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Game.currentFragment = Constants.FRAGMENT_LOBBY;
-                        FragmentManager fragmentManager = getFragmentManager();
-                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.rootView, new LobbyInterface());
-                        fragmentTransaction.commit();
+                        exitRoom();
                     }
                 });
         alertDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

@@ -120,7 +120,6 @@ public class LobbyInterface extends Fragment {
         });
 
         showNewPlayerTutorial();
-        Utilities.playSound(getActivity(), Constants.AUDIO_MOVE_LVL);
 
         return v;
     }
@@ -163,16 +162,24 @@ public class LobbyInterface extends Fragment {
             @Override
             public void onClick(DialogInterface dialog, int i) {
                 String strName = arrayAdapter.getItem(i);
+                int selectedFloor = 0;
                 switch(i){
                     case 0:
                         prefs.edit().putInt(Constants.PREFS_FLOOR_NUMBER, 3).commit();
+                        selectedFloor = 3;
                         break;
                     case 1:
                         prefs.edit().putInt(Constants.PREFS_FLOOR_NUMBER, 2).commit();
+                        selectedFloor = 2;
                         break;
                     case 2:
                         prefs.edit().putInt(Constants.PREFS_FLOOR_NUMBER, 1).commit();
+                        selectedFloor = 1;
                         break;
+                }
+                Log.d(TAG, "onClick: floorNumber: "+floorNumber+" selectedFloor: "+selectedFloor);
+                if(floorNumber!=selectedFloor){
+                    Utilities.playSound(getActivity(), Constants.AUDIO_MOVE_LVL);
                 }
                 floorNumber = prefs.getInt(Constants.PREFS_FLOOR_NUMBER, 1);
                 Log.d(TAG, "onClick: "+strName);
@@ -190,6 +197,8 @@ public class LobbyInterface extends Fragment {
         Log.d(TAG, "toRoomInterface: "+id);
         roomSet.add(String.valueOf(id));
         prefs.edit().putStringSet(Constants.PREFS_ROOM_SET, roomSet).commit();
+
+        Utilities.playSound(getActivity(), Constants.AUDIO_ROOM_DOOR);
 
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

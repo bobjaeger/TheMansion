@@ -3,7 +3,8 @@
     package="com.den.jaeger.themansion.game_feature">
 
     <application>
-        <activity android:name=".MenuActivity">
+        <activity android:name=".MenuActivity"
+            android:screenOrientation="portrait">
             <intent-filter android:order="1">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -21,7 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HighScore">
+        <activity android:name=".HighScore"
+            android:screenOrientation="portrait">
             <intent-filter android:order="1">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -34,7 +36,8 @@
                     android:scheme="https" />
             </intent-filter>
         </activity>
-        <activity android:name=".Game">
+        <activity android:name=".Game"
+            android:screenOrientation="portrait">
             <intent-filter android:order="1">
                 <action android:name="android.intent.action.VIEW" />
 
