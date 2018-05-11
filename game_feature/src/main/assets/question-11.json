@@ -1,125 +1,88 @@
 [ // DRUG LAB
   {
     "qid":110,
-    "question": "Chemical experiment",
+    "question": "There are some chemical experiment, should I drink it?",
     "answers": [
       {
         "answer": "Red liquid",
-        "next_qid": 100,
-        "another_dialog": "there was a guy big guy that very crazy, work here, CAREFULL!!",
-        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+        "next_qid": 111,
+        "another_dialog": "You feeling unconscious, and your eye start getting blinded by red vision. You will see a thing in a moment",
+        "effect": 1 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
         "answer": "Green powder",
-        "next_qid": 100,
-        "another_dialog": "He used to be called the Butcher, and the one has closest connection to Mr. Grey. He the only knows about Mr. Grey secret.", // NULLABLE
-        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+        "next_qid": 110,
+        "another_dialog": "You feels like more energetic", // NULLABLE
+        "effect": 2 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
         "answer": "Blue herb",
-        "next_qid": 101,
-        "another_dialog": "meanwhile staring at… wind blew up the candle", // NULLABLE
+        "next_qid": 112,
+        "another_dialog": "feels smart at moment you what you need to do right now, use your moment wisely", // NULLABLE
         "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
         "answer": "Purple liquid",
-        "next_qid": 101,
-        "another_dialog": "meanwhile staring at… wind blew up the candle", // NULLABLE
-        "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+        "next_qid": 110,
+        "another_dialog": "suddenly you can't handle yourself and running away from the room", // NULLABLE
+        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   },
 
   {
     "qid":111, //REDLIQUID
-    "question": "after drink red liquid, I feel like see a red object things in this room",
+    "question": "After drink red liquid, I feel like see a red object things in this room",
     "answers": [
       {
-        "answer": "Box",
-        "next_qid": 102,
-        "another_dialog": "Computer turned on from sleep",
-        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+        "answer": "Lab equipment box",
+        "next_qid": 111,
+        "another_dialog": "You getting harmed by the lab tools inside and drop off your candle",
+        "effect": 1 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
-        "answer": "Books",
-        "next_qid": 103,
-        "another_dialog": "Screen message – Don’t ever touch the computer", // NULLABLE
-        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      }
-    ]
-  },
-
-  {
-    "qid":113, //GREENPOWDER
-    "question": "check a computer!",
-    "answers": [
-      {
-        "answer": "Press any button",
-        "next_qid": 102,
-        "another_dialog": "Computer turned on from sleep",
-        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "read on the screen message",
-        "next_qid": 103,
-        "another_dialog": "Screen message – Don’t ever touch the computer", // NULLABLE
-        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "turned off the computer",
-        "next_qid": 101,
-        "another_dialog": "showed up new message – don’t even try to know who am I", // NULLABLE
+        "answer": "Professor notes",
+        "next_qid": 113,
+        "another_dialog": "So prof all of behind this experiment! no wonder he seems close to Mr.Grey, oh wait there is more notes should I read it?", // NULLABLE
         "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   },
 
   {
-    "qid":114, //BLUEHERB
-    "question": "check a computer!",
+    "qid":112, //BLUEHERB
+    "question": "What I need to know?",
     "answers": [
       {
-        "answer": "Press any button",
-        "next_qid": 102,
-        "another_dialog": "Computer turned on from sleep",
+        "answer": "dirty works secret",
+        "next_qid": 112,
+        "another_dialog": "The secret of all this beautiful mansion is they doing a dirty work that used the people around, I wonder why why Mr.Grey doing this",
         "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
-        "answer": "read on the screen message",
-        "next_qid": 103,
-        "another_dialog": "Screen message – Don’t ever touch the computer", // NULLABLE
+        "answer": "what they really do",
+        "next_qid": 112,
+        "another_dialog": "They do make a experiment on drugs and supply it to the buyer at city, I think I can now more of this from Butcher. Check Office room maybe? but where is it", // NULLABLE
         "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "turned off the computer",
-        "next_qid": 101,
-        "another_dialog": "showed up new message – don’t even try to know who am I", // NULLABLE
-        "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   },
 
   {
-    "qid":114, //PURPLELIQUID
-    "question": "check a computer!",
+    "qid":113, //Prof NOTES
+    "question": "Read more!",
     "answers": [
       {
-        "answer": "Press any button",
-        "next_qid": 102,
-        "another_dialog": "Computer turned on from sleep",
+        "answer": "Lab Notes",
+        "next_qid": 113,
+        "another_dialog": "I should begin collecting the experiment data and go to meeting room at upper floor, seems interesting!",
         "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
-        "answer": "read on the screen message",
-        "next_qid": 103,
-        "another_dialog": "Screen message – Don’t ever touch the computer", // NULLABLE
+        "answer": "My Dear",
+        "next_qid": 113,
+        "another_dialog": "Suicide! after all I do, now I know it's about time how I end myself here in the mansion.", // NULLABLE
         "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "turned off the computer",
-        "next_qid": 101,
-        "another_dialog": "showed up new message – don’t even try to know who am I", // NULLABLE
-        "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   }

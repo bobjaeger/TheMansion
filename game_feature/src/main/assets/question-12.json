@@ -1,38 +1,38 @@
 [//STORAGE ROOM
   {
     "qid":120,
-    "question": "Opened Box",
+    "question": "Sealed box",
     "answers": [
       {
-        "answer": "Read",
-        "next_qid": 100,
-        "another_dialog": "there was a guy big guy that very crazy, work here, CAREFULL!!",
-        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+        "answer": "something come up from inside the box",
+        "next_qid": 120,
+        "another_dialog": "ooughh! what is this smell, you lose your sight and confused drop the candle",
+        "effect": 1 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
-        "answer": "ripped of the paper",
-        "next_qid": 100,
-        "another_dialog": "He used to be called the Butcher, and the one has closest connection to Mr. Grey. He the only knows about Mr. Grey secret.", // NULLABLE
-        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+        "answer": "Dangerous don't touch this, please handle it with care",
+        "next_qid": 121,
+        "another_dialog": "I shouldn't open this box", // NULLABLE
+        "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   },
 
   {
     "qid":121,
-    "question": "Un-opened Box",
+    "question": "Opened tool box",
     "answers": [
       {
-        "answer": "Press any button",
-        "next_qid": 102,
-        "another_dialog": "Computer turned on from sleep",
-        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+        "answer": "Interesting",
+        "next_qid": 121,
+        "another_dialog": "try the tool to fire up another candle, and it's work",
+        "effect": 2 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
-        "answer": "read on the screen message",
-        "next_qid": 103,
-        "another_dialog": "Screen message – Don’t ever touch the computer", // NULLABLE
-        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+        "answer": "Flammable sign, should I try?",
+        "next_qid": 121,
+        "another_dialog": "You burn your hand and drop down the candle", // NULLABLE
+        "effect": 1 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   }

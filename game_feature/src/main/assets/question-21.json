@@ -1,32 +1,26 @@
 [ // Kitchen
   {
-    "qid":100,
-    "question": "check papers document?",
+    "qid":210,
+    "question": "opened kitchen sink water tap",
     "answers": [
       {
-        "answer": "Read",
-        "next_qid": 100,
-        "another_dialog": "there was a guy big guy that very crazy, work here, CAREFULL!!",
-        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "ripped of the paper book",
-        "next_qid": 102,
-        "another_dialog": "He used to be called the Butcher, and the one has closest relationship to Mr.Grey. He the only knows about Mr.Grey secret.", // NULLABLE
-        "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "do nothing",
-        "next_qid": 101,
-        "another_dialog": "meanwhile staring at… wind blew up the candle", // NULLABLE
+        "answer": "Close the drain",
+        "next_qid": 210,
+        "another_dialog": "something came up from the drain, you lose stability and fall down",
         "effect": 1 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+      },
+      {
+        "answer": "Close the water tap",
+        "next_qid": 212,
+        "another_dialog": "water leaking from the bottom", // NULLABLE
+        "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   },
 
   {
-    "qid":101,
-    "question": "check the turned on computer!",
+    "qid":211,
+    "question": "paper mail on the table with MrGrey name on it",
     "answers": [
       {
         "answer": "Press any button",
@@ -56,13 +50,13 @@
   },
 
   {
-    "qid":102,
-    "question": "there was bulletin board",
+    "qid":212,
+    "question": "What you need to do?",
     "answers": [
       {
-        "answer": "Schedule",
-        "next_qid": 102,
-        "another_dialog": "-Worker moving package from dock station to storage room \n -Professor check the things inside package and start making an experiment and producing drugs at drug lab \n -TheBoss or Butcher check all the things run smoothly and give report to Mr.Grey ",
+        "answer": "open the water tap again and mop the floor",
+        "next_qid": 212,
+        "another_dialog": "mopping the floor and you found a small notes written 'the key always on MrGrey hand'",
         "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
