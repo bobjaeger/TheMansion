@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -108,5 +109,42 @@ public class Utilities {
         }
 
         return builder;
+    }
+
+    public static void playSound(Activity activity, int i){
+        int audio = 0;
+        switch(i){
+            case Constants.AUDIO_ANSWER:
+                audio = R.raw.answer;
+                break;
+            case Constants.AUDIO_CLOSE_NOTE:
+                audio = R.raw.close_note;
+                break;
+            case Constants.AUDIO_DEATH:
+                audio = R.raw.death;
+                break;
+            case Constants.AUDIO_KEY:
+                audio = R.raw.key;
+                break;
+            case Constants.AUDIO_LIFE_MINUS:
+                audio = R.raw.life_minus;
+                break;
+            case Constants.AUDIO_LIFE_PLUS:
+                audio = R.raw.life_plus;
+                break;
+            case Constants.AUDIO_MOVE_LVL:
+                audio = R.raw.move_lvl;
+                break;
+            case Constants.AUDIO_OPEN_NOTE:
+                audio = R.raw.open_note;
+                break;
+            case Constants.AUDIO_ROOM_DOOR:
+                audio = R.raw.room_door;
+                break;
+        }
+        MediaPlayer mp = MediaPlayer.create(activity, audio);
+        mp.setLooping(false);
+        mp.start();
+        Log.d(TAG, "playSound: audio played");
     }
 }

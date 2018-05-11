@@ -34,4 +34,14 @@ public class Constants {
     public static final String MESSAGE_ARE_YOU_SURE = "Are you sure?";
     public static final String MESSAGE_EXIT_ROOM = "Exit room?";
     public static final String MESSAGE_EXIT_GAME = "Exit game?";
+
+    public static final int AUDIO_ANSWER = 1;
+    public static final int AUDIO_CLOSE_NOTE = 2;
+    public static final int AUDIO_DEATH = 3;
+    public static final int AUDIO_KEY = 4;
+    public static final int AUDIO_LIFE_MINUS = 5;
+    public static final int AUDIO_LIFE_PLUS = 6;
+    public static final int AUDIO_MOVE_LVL = 7;
+    public static final int AUDIO_OPEN_NOTE = 8;
+    public static final int AUDIO_ROOM_DOOR = 9;
 }

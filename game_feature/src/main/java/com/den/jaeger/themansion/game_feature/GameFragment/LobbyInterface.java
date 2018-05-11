@@ -120,6 +120,7 @@ public class LobbyInterface extends Fragment {
         });
 
         showNewPlayerTutorial();
+        Utilities.playSound(getActivity(), Constants.AUDIO_MOVE_LVL);
 
         return v;
     }
