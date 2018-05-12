@@ -217,7 +217,7 @@ public class RoomInterface extends Fragment {
     private void increaseLife() {
         visitedQuestion.add(String.valueOf(currentQuestion.getQid()));
         prefs.edit().putStringSet(Constants.PREFS_VISITED_QUESTION, visitedQuestion).commit();
-        
+
         Utilities.playSound(getActivity(), Constants.AUDIO_LIFE_PLUS);
 
         lifeNumber+=1;
