@@ -23,28 +23,16 @@
     "question": "paper mail on the table with MrGrey name on it",
     "answers": [
       {
-        "answer": "Press any button",
+        "answer": "Open and read",
         "next_qid": 101,
-        "another_dialog": "Computer turned on from sleep",
+        "another_dialog": "Dear MrGrey,/n Please help us, our village it's getting terror day to day from unknown guy. /n They always come and ask who is the leader here. ",
         "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
-        "answer": "read on the screen message",
+        "answer": "look closely what mail for?",
         "next_qid": 101,
         "another_dialog": "Screen message – Don’t ever touch the computer", // NULLABLE
         "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "turned off the computer",
-        "next_qid": 101,
-        "another_dialog": "showed up new message – don’t even try to know who am I", // NULLABLE
-        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "check computer desk",
-        "next_qid": 101,
-        "another_dialog": "This will be great I can use the lighter for my candle", // NULLABLE
-        "effect": 2 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   },

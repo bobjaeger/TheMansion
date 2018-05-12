@@ -20,7 +20,7 @@ try to give all information as we can in this readme doc.
 - If you're unsure how to do it you can see the full guide how to run the app in emulator on this link
 link -https://developer.android.com/studio/run/emulator
 
-# TheMansion RPG App Game
+# The Mansion RPG App Game
 - The game is based on Android App. It's a game that has a rich of stories inside. We try to make the game base to fit all
 conditions for another scenario.
 

@@ -51,7 +51,7 @@ public class HighScoreAdapter extends RecyclerView.Adapter<HighScoreAdapter.View
 
         void bindData(HighScoreModel highScoreModel){
             textName.setText(highScoreModel.getName());
-            textTimeFinished.setText(String.valueOf(highScoreModel.getTimeFinished()));
+            textTimeFinished.setText(String.valueOf(highScoreModel.getTimeFinished())+"s");
         }
     }
 }

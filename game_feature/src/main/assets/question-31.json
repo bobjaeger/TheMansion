@@ -1,17 +1,17 @@
-[ // Bathroom
+[ // Bedroom
   {
     "qid":310,
     "question": "check papers document?",
     "answers": [
       {
         "answer": "Read",
-        "next_qid": 100,
+        "next_qid": 310,
         "another_dialog": "there was a guy big guy that very crazy, work here, CAREFULL!!",
-        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+        "effect": 4 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
         "answer": "ripped of the paper book",
-        "next_qid": 102,
+        "next_qid": 310,
         "another_dialog": "He used to be called the Butcher, and the one has closest relationship to Mr.Grey. He the only knows about Mr.Grey secret.", // NULLABLE
         "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
@@ -30,25 +30,25 @@
     "answers": [
       {
         "answer": "Press any button",
-        "next_qid": 101,
+        "next_qid": 311,
         "another_dialog": "Computer turned on from sleep",
         "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
         "answer": "read on the screen message",
-        "next_qid": 101,
+        "next_qid": 311,
         "another_dialog": "Screen message – Don’t ever touch the computer", // NULLABLE
         "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
         "answer": "turned off the computer",
-        "next_qid": 101,
+        "next_qid": 311,
         "another_dialog": "showed up new message – don’t even try to know who am I", // NULLABLE
         "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
         "answer": "check computer desk",
-        "next_qid": 101,
+        "next_qid": 311,
         "another_dialog": "This will be great I can use the lighter for my candle", // NULLABLE
         "effect": 2 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
@@ -61,13 +61,13 @@
     "answers": [
       {
         "answer": "Schedule",
-        "next_qid": 102,
+        "next_qid": 312,
         "another_dialog": "-Worker moving package from dock station to storage room \n -Professor check the things inside package and start making an experiment and producing drugs at drug lab \n -TheBoss or Butcher check all the things run smoothly and give report to Mr.Grey ",
         "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
         "answer": "notes",
-        "next_qid": 101,
+        "next_qid": 312,
         "another_dialog": "Check the computer for more information about how we run the works guys", // NULLABLE
         "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
