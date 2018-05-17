@@ -2,6 +2,44 @@
 Bobby Putra	SID215339949
 Dennis Darwis SID216280619
 
+# API References
+### Data model classes
+RoomModel
+```
+public RoomModel(int id, String roomName) {
+        this.id = id;
+        this.roomName = roomName;
+}
+```
+QuestionModel
+```
+public QuestionModel(int qid, String question, List<AnswerModel> answerLists) {
+        this.qid = qid;
+        this.question = question;
+        this.answerLists = answerLists;
+}
+```
+AnswerModel
+```
+public AnswerModel(int nextQid, String answer, String anotherDialog, int effect) {
+        this.nextQid = nextQid;
+        this.answer = answer;
+        this.anotherDialog = anotherDialog;
+        this.effect = effect;
+}
+```
+HighScoreModel
+```
+public RoomModel(int id, String roomName) {
+        this.id = id;
+        this.roomName = roomName;
+}
+```
+### Important methods and classes
+- loadJSONFromAsset(): to read external JSON game file.
+- parseRoom(): to parse the JSON room file while on LobbyInterface.
+- loadQuestionById() and loadFirstQuestion(): to parse the JSON question file while on RoomInterface.
+
 # Latest Henry comments 27/April (replied)
 - missing compile instructions and directory explanation in readme (eg where do I find your data?)
 reply: Yes we understand about that, We have many commits in this week but we still need to be done data works, we'll
