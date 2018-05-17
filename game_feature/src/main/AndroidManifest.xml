@@ -3,7 +3,8 @@
     package="com.den.jaeger.themansion.game_feature">
 
     <application>
-        <activity android:name=".MenuActivity"
+        <activity
+            android:name=".MenuActivity"
             android:screenOrientation="portrait">
             <intent-filter android:order="1">
                 <action android:name="android.intent.action.VIEW" />
@@ -17,7 +18,8 @@
                     android:scheme="https" />
             </intent-filter>
         </activity>
-        <activity android:name=".HighScore"
+        <activity
+            android:name=".HighScore"
             android:screenOrientation="portrait">
             <intent-filter android:order="1">
                 <action android:name="android.intent.action.VIEW" />
@@ -31,7 +33,8 @@
                     android:scheme="https" />
             </intent-filter>
         </activity>
-        <activity android:name=".Game"
+        <activity
+            android:name=".Game"
             android:screenOrientation="portrait">
             <intent-filter android:order="1">
                 <action android:name="android.intent.action.VIEW" />
@@ -45,8 +48,8 @@
                     android:scheme="https" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".SplashScreen"
+        <activity
+            android:name=".SplashScreen"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter android:order="1">
@@ -66,7 +69,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".About">
+            <intent-filter android:order="1">
+                <action android:name="android.intent.action.VIEW" />
 
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="example.com"
+                    android:pathPattern="/.*"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

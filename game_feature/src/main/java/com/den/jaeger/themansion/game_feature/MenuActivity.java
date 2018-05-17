@@ -44,6 +44,12 @@ public class MenuActivity extends AppCompatActivity {
                 toHighScore();
             }
         });
+        buttonAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toAbout();
+            }
+        });
     }
 
     private void showNameDialog() {
@@ -114,6 +120,12 @@ public class MenuActivity extends AppCompatActivity {
 
     private void toHighScore() {
         Intent intent = new Intent(this, HighScore.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+    }
+
+    private void toAbout() {
+        Intent intent = new Intent(this, About.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
     }

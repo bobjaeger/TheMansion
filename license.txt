@@ -1,4 +1,39 @@
 Graphic/Visual license list:
-splash.png image of https://jordangrimmer.deviantart.com/art/The-Governor-s-Mansion-II-503729286 - Acknowledge permission to use by Jordan Grimmer limited to university project 
+- Image used for: SplashScreen background edited with PS and menu background image
+  Path inside project directory:
+  SplashScreen named: splash1.png
+  Menu background named: home_img.jpeg
+  Original image file name: house-cemetery-haunted-house-house-near-the-cemetery-366282.jpeg
+  Source link: https://www.pexels.com/photo/abandoned-architecture-balcony-cemetery-366282/
+  License type: CC0 License
+
+- Image used for: App icon square and rounded edited with PS
+  Path inside project directory:
+  Squared icon named: ic_launcher.png
+  Rounded icon named: ic_launcher_round.png
+  Original image file name: antique-architecture-dark-348688.jpg
+  Source link: https://www.pexels.com/photo/antique-architecture-dark-design-348688/
+  License type: CC0 License
+
+- Image used for: Buttons inside game
+  Path inside project directory:
+  Button named: back_button.jpg
+  Original image file name: background-board-carpentry-301378.jpg
+  Source link: https://www.pexels.com/photo/background-board-carpentry-construction-301378/
+  License type: CC0 License
+
+- Image used for:
+  Path inside project directory:
+  Button named:
+  Original image file name:
+  Source link:
+  License type: CC0 License
+
+- Image used for:
+  Path inside project directory:
+  Button named:
+  Original image file name:
+  Source link:
+  License type: CC0 License
 
 Audio/Sound Effect license list:

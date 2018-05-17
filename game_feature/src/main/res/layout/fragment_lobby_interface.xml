@@ -3,43 +3,101 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+    android:background="#000000">
 
-    <RelativeLayout
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="false"
+        android:alpha="0.4"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/back_lobby" />
+
+    <!--<LinearLayout
         android:id="@+id/layoutTop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="15dp">
+        android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textLevelName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Level Name"
-            android:textColor="#FFFFFF"
-            android:textSize="20dp" />
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/back_button">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/textLevelName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Level Name"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="40dp"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            android:orientation="vertical">
+            android:layout_marginLeft="7dp"
+            android:background="@drawable/back_button">
 
             <TextView
                 android:id="@+id/textNote"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true"
+                android:textAlignment="center"
                 android:text="Note"
                 android:textColor="#FFFFFF"
-                android:textSize="20dp" />
-        </LinearLayout>
+                android:textSize="25dp" />
+        </RelativeLayout>
 
-    </RelativeLayout>
+    </LinearLayout>-->
+    <LinearLayout
+        android:id="@+id/layoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/back_button">
+
+            <TextView
+                android:id="@+id/textLevelName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Level Name"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/back_button">
+
+            <TextView
+                android:id="@+id/textNote"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="Note"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="25dp" />
+        </RelativeLayout>
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -176,50 +234,60 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
+
+
+    <LinearLayout
         android:id="@+id/layoutBottom"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:paddingBottom="15dp">
+        android:weightSum="2">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/back_button">
 
-        <TextView
-            android:id="@+id/textChangeLevel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Change Level"
-            android:textColor="#FFFFFF"
-            android:textSize="20dp" />
+            <TextView
+                android:id="@+id/textChangeLevel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:text="Change Level"
+                android:textColor="#FFFFFF"
+                android:textSize="25dp" />
+        </RelativeLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/back_button">
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
+                android:layout_height="match_parent"
                 android:layout_alignParentTop="true"
-                android:layout_weight="1"
+                android:layout_centerHorizontal="true"
                 android:text="Life: "
+                android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                android:textSize="20dp" />
+                android:textSize="25dp" />
 
             <TextView
                 android:id="@+id/textLifeNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_toRightOf="@+id/textView5"
                 android:text="3"
                 android:textColor="#FFFFFF"
-                android:textSize="20dp" />
-        </LinearLayout>
-
-    </RelativeLayout>
+                android:textSize="25dp" />
+        </RelativeLayout>
+    </LinearLayout>
 
 </RelativeLayout>

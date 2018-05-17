@@ -3,222 +3,260 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+    android:background="#000000">
 
-    <RelativeLayout
-        android:id="@+id/layoutTop"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="15dp">
-
-        <TextView
-            android:id="@+id/textRoomName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Room Name"
-            android:textColor="#FFFFFF"
-            android:textSize="20dp" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textNote"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true"
-                android:text="Note"
-                android:textColor="#FFFFFF"
-                android:textSize="20dp" />
-        </LinearLayout>
-
-    </RelativeLayout>
-
-    <RelativeLayout
+    <ImageView
+        android:id="@+id/imageView4"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/layoutBottom"
-        android:layout_below="@+id/layoutTop"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_weight="2.5"
-            android:background="#FFFFFF"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="5dp">
-
-            <TextView
-                android:id="@+id/textQuestion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Question" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_weight="7.5"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:weightSum="2">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="5dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-                <RelativeLayout
-                    android:id="@+id/answer1"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="2.5dp"
-                    android:layout_weight="1"
-                    android:background="#FFFFFF">
-
-                    <TextView
-                        android:id="@+id/textAnswer1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:text="Room 1 Name"
-                        android:textAlignment="center"
-                        android:textSize="16dp" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/answer2"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="2.5dp"
-                    android:layout_weight="1"
-                    android:background="#FFFFFF">
-
-                    <TextView
-                        android:id="@+id/textAnswer2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:text="Room 2 Name"
-                        android:textAlignment="center"
-                        android:textSize="16dp" />
-
-                </RelativeLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="5dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-                <RelativeLayout
-                    android:id="@+id/answer3"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="2.5dp"
-                    android:layout_weight="1"
-                    android:background="#FFFFFF">
-
-                    <TextView
-                        android:id="@+id/textAnswer3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:text="Room 3 Name"
-                        android:textAlignment="center"
-                        android:textSize="16dp" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/answer4"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="2.5dp"
-                    android:layout_weight="1"
-                    android:background="#FFFFFF">
-
-                    <TextView
-                        android:id="@+id/textAnswer4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:text="Room 4 Name"
-                        android:textAlignment="center"
-                        android:textSize="16dp" />
-
-                </RelativeLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-    </RelativeLayout>
+        app:srcCompat="@drawable/back_room" />
 
     <RelativeLayout
-        android:id="@+id/layoutBottom"
+
+        android:id="@+id/layoutTop1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:paddingBottom="15dp">
-
-        <TextView
-            android:id="@+id/textExitRoom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Exit Room"
-            android:textColor="#FFFFFF"
-            android:textSize="20dp" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:id="@+id/layoutTop"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:weightSum="2">
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/back_button">
+
+                <TextView
+                    android:id="@+id/textRoomName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Room Name"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
                 android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
                 android:layout_weight="1"
-                android:text="Life: "
-                android:textColor="#FFFFFF"
-                android:textSize="20dp" />
+                android:background="@drawable/back_button">
 
-            <TextView
-                android:id="@+id/textLifeNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                <TextView
+                    android:id="@+id/textNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Note"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layoutBottom"
+            android:layout_below="@+id/layoutTop"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="2.5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/textQuestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Question" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="7.5"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/answer1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="2.5dp"
+                        android:layout_weight="1"
+                        android:background="#FFFFFF">
+
+                        <TextView
+                            android:id="@+id/textAnswer1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="Room 1 Name"
+                            android:textAlignment="center"
+                            android:textSize="16dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/answer2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2.5dp"
+                        android:layout_weight="1"
+                        android:background="#FFFFFF">
+
+                        <TextView
+                            android:id="@+id/textAnswer2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="Room 2 Name"
+                            android:textAlignment="center"
+                            android:textSize="16dp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/answer3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="2.5dp"
+                        android:layout_weight="1"
+                        android:background="#FFFFFF">
+
+                        <TextView
+                            android:id="@+id/textAnswer3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="Room 3 Name"
+                            android:textAlignment="center"
+                            android:textSize="16dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/answer4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2.5dp"
+                        android:layout_weight="1"
+                        android:background="#FFFFFF">
+
+                        <TextView
+                            android:id="@+id/textAnswer4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="Room 4 Name"
+                            android:textAlignment="center"
+                            android:textSize="16dp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutBottom"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:text="3"
-                android:textColor="#FFFFFF"
-                android:textSize="20dp" />
+                android:background="@drawable/back_button">
+
+                <TextView
+                    android:id="@+id/textExitRoom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:text="Exit Room"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/back_button">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Life: "
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/textLifeNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/textView5"
+                    android:text="3"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25dp" />
+            </RelativeLayout>
+
         </LinearLayout>
 
     </RelativeLayout>
