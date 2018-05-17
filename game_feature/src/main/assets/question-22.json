@@ -1,37 +1,37 @@
 [ // Living room
   {
     "qid":220,
-    "question": "check papers document?",
+    "question": "Turn on the TV",
     "answers": [
       {
-        "answer": "Read",
-        "next_qid": 100,
-        "another_dialog": "there was a guy big guy that very crazy, work here, CAREFULL!!",
+        "answer": "Leave it!",
+        "next_qid": 220,
+        "another_dialog": "The TV just display greyed no signal",
         "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
-        "answer": "ripped of the paper book",
-        "next_qid": 102,
-        "another_dialog": "He used to be called the Butcher, and the one has closest relationship to Mr.Grey. He the only knows about Mr.Grey secret.", // NULLABLE
-        "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+        "answer": "insert a tape and play it",
+        "next_qid": 220,
+        "another_dialog": "After watching it, I think I know where Mr.Grey hide the key. \n He always bring it with him anywhere.", // NULLABLE
+        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
-        "answer": "do nothing",
-        "next_qid": 101,
-        "another_dialog": "meanwhile staring at… wind blew up the candle", // NULLABLE
-        "effect": 1 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+        "answer": "turn up the volume",
+        "next_qid": 220,
+        "another_dialog": "the screen tell doesn't have signal and greyed but their is audio playing in the background talking about \n the audio said about The Mansion story and who is live inside here, the one really popular inside The Mansion is Butcher.", // NULLABLE
+        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   },
 
   {
     "qid":221,
-    "question": "check the turned on computer!",
+    "question": "there is blood trail",
     "answers": [
       {
-        "answer": "Press any button",
+        "answer": "follow the trail where is end",
         "next_qid": 101,
-        "another_dialog": "Computer turned on from sleep",
+        "another_dialog": "the blood trail go to hall room, it's a ",
         "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
