@@ -1,75 +1,82 @@
 [ // Bedroom
   {
     "qid":310,
-    "question": "check papers document?",
+    "question": "check every corner of the room",
     "answers": [
       {
-        "answer": "Read",
+        "answer": "There is half opened wardrobe",
         "next_qid": 310,
-        "another_dialog": "there was a guy big guy that very crazy, work here, CAREFULL!!",
-        "effect": 4 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+        "another_dialog": "take a look at it but I think inside is a dead body, it's very stinky...",
+        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
-        "answer": "ripped of the paper book",
+        "answer": "Blood shattered on the mattress",
         "next_qid": 310,
-        "another_dialog": "He used to be called the Butcher, and the one has closest relationship to Mr.Grey. He the only knows about Mr.Grey secret.", // NULLABLE
-        "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+        "another_dialog": "I think the killer kill somebody in bed", // NULLABLE
+        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
-        "answer": "do nothing",
-        "next_qid": 101,
-        "another_dialog": "meanwhile staring at… wind blew up the candle", // NULLABLE
-        "effect": 1 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+        "answer": "There is white letter written on the floor",
+        "next_qid": 310,
+        "another_dialog": "please help me I got dragged by someone to the bathroom", // NULLABLE
+        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   },
 
   {
     "qid":311,
-    "question": "check the turned on computer!",
+    "question": "open a big unpacked box",
     "answers": [
       {
-        "answer": "Press any button",
+        "answer": "take a look what I can get",
         "next_qid": 311,
-        "another_dialog": "Computer turned on from sleep",
-        "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "read on the screen message",
-        "next_qid": 311,
-        "another_dialog": "Screen message – Don’t ever touch the computer", // NULLABLE
-        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "turned off the computer",
-        "next_qid": 311,
-        "another_dialog": "showed up new message – don’t even try to know who am I", // NULLABLE
-        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "check computer desk",
-        "next_qid": 311,
-        "another_dialog": "This will be great I can use the lighter for my candle", // NULLABLE
+        "another_dialog": "great some lighter might try to used it",
         "effect": 2 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+      },
+      {
+        "answer": "move it",
+        "next_qid": 311,
+        "another_dialog": "there is message written under the box, said MR.Grey things! please handle it with care", // NULLABLE
+        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   },
 
   {
     "qid":312,
-    "question": "there was bulletin board",
+    "question": "desk drawer",
     "answers": [
       {
-        "answer": "Schedule",
+        "answer": "Mr.Grey Notebook",
         "next_qid": 312,
         "another_dialog": "-Worker moving package from dock station to storage room \n -Professor check the things inside package and start making an experiment and producing drugs at drug lab \n -TheBoss or Butcher check all the things run smoothly and give report to Mr.Grey ",
         "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
-        "answer": "notes",
+        "answer": "drugs prescription",
         "next_qid": 312,
-        "another_dialog": "Check the computer for more information about how we run the works guys", // NULLABLE
-        "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+        "another_dialog": "it stated for MR.Grey, 2 table per day and a cream after taking a bath", // NULLABLE
+        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+      }
+    ]
+  },
+
+  {
+    "qid":313,
+    "question": "half opened safe box",
+    "answers": [
+      {
+        "answer": "I think someone forced to open it",
+        "next_qid": 313,
+        "another_dialog": "ohhh so many dollars in it, what is that! A GUN?",
+        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+      },
+      {
+        "answer": "paycheck with Mr.Grey sign on it",
+        "next_qid": 313,
+        "another_dialog": "it's written Mr.Grey send a money to his parent and wife, but as I know he kill his own wife here in The Mansion", // NULLABLE
+        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   }

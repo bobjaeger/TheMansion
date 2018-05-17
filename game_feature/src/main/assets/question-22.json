@@ -30,46 +30,15 @@
     "answers": [
       {
         "answer": "follow the trail where is end",
-        "next_qid": 101,
-        "another_dialog": "the blood trail go to hall room, it's a ",
-        "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "read on the screen message",
-        "next_qid": 101,
-        "another_dialog": "Screen message – Don’t ever touch the computer", // NULLABLE
+        "next_qid": 221,
+        "another_dialog": "the blood trail go to hall room, it's a human body blood trail",
         "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
-        "answer": "turned off the computer",
-        "next_qid": 101,
-        "another_dialog": "showed up new message – don’t even try to know who am I", // NULLABLE
+        "answer": "take a look where the trail come from",
+        "next_qid": 221,
+        "another_dialog": "the blood is from the sofa, it must be someone sitting here and get dragged", // NULLABLE
         "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "check computer desk",
-        "next_qid": 101,
-        "another_dialog": "This will be great I can use the lighter for my candle", // NULLABLE
-        "effect": 2 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      }
-    ]
-  },
-
-  {
-    "qid":222,
-    "question": "there was bulletin board",
-    "answers": [
-      {
-        "answer": "Schedule",
-        "next_qid": 102,
-        "another_dialog": "-Worker moving package from dock station to storage room \n -Professor check the things inside package and start making an experiment and producing drugs at drug lab \n -TheBoss or Butcher check all the things run smoothly and give report to Mr.Grey ",
-        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "notes",
-        "next_qid": 101,
-        "another_dialog": "Check the computer for more information about how we run the works guys", // NULLABLE
-        "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   }

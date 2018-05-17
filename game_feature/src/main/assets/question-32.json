@@ -1,75 +1,88 @@
 [ // Bathroom
   {
     "qid":320,
-    "question": "check papers document?",
+    "question": "the basin water tap is remain opened",
     "answers": [
       {
-        "answer": "Read",
-        "next_qid": 100,
-        "another_dialog": "there was a guy big guy that very crazy, work here, CAREFULL!!",
+        "answer": "pick up the lid sink",
+        "next_qid": 320,
+        "another_dialog": "the water with blood is sink and there is a ring come up, sculpted Mr.Grey",
         "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
-        "answer": "ripped of the paper book",
-        "next_qid": 102,
-        "another_dialog": "He used to be called the Butcher, and the one has closest relationship to Mr.Grey. He the only knows about Mr.Grey secret.", // NULLABLE
+        "answer": "I think...",
+        "next_qid": 321,
+        "another_dialog": "There is something here that maybe I can solve", // NULLABLE
         "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "do nothing",
-        "next_qid": 101,
-        "another_dialog": "meanwhile staring at… wind blew up the candle", // NULLABLE
-        "effect": 1 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   },
 
   {
     "qid":321,
-    "question": "check the turned on computer!",
+    "question": "blood hand marked on the bathroom mirror",
     "answers": [
       {
-        "answer": "Press any button",
-        "next_qid": 101,
-        "another_dialog": "Computer turned on from sleep",
+        "answer": "help...",
+        "next_qid": 321,
+        "another_dialog": "someone must be dragged to here",
+        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+      },
+      {
+        "answer": "smell the blood",
+        "next_qid": 322,
+        "another_dialog": "the blood it's still fresh and it's not really dry there must be...", // NULLABLE
         "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
-        "answer": "read on the screen message",
-        "next_qid": 101,
-        "another_dialog": "Screen message – Don’t ever touch the computer", // NULLABLE
-        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "turned off the computer",
-        "next_qid": 101,
-        "another_dialog": "showed up new message – don’t even try to know who am I", // NULLABLE
-        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "check computer desk",
-        "next_qid": 101,
-        "another_dialog": "This will be great I can use the lighter for my candle", // NULLABLE
-        "effect": 2 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+      "answer": "look closer there is something written more",
+      "next_qid": 321,
+      "another_dialog": "is said I'm here, and you just get surprised by dead body come up from the bathtub", // NULLABLE
+      "effect": 1 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   },
 
   {
     "qid":322,
-    "question": "there was bulletin board",
+    "question": "blood and water mixed flooding from bathtub",
     "answers": [
       {
-        "answer": "Schedule",
-        "next_qid": 102,
-        "another_dialog": "-Worker moving package from dock station to storage room \n -Professor check the things inside package and start making an experiment and producing drugs at drug lab \n -TheBoss or Butcher check all the things run smoothly and give report to Mr.Grey ",
+        "answer": "flush the bathtub with water",
+        "next_qid": 322,
+        "another_dialog": "Oh my god, it's Mr.Grey he is dead, you panicking and don't know what to do",
         "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
-        "answer": "notes",
-        "next_qid": 101,
-        "another_dialog": "Check the computer for more information about how we run the works guys", // NULLABLE
+        "answer": "search Mr.Grey body for the key",
+        "next_qid": 322,
+        "another_dialog": "It's not here, ah this smelly dead body I can't handle myself", // NULLABLE
+        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+      },
+      {
+        "answer": "thinking",
+        "next_qid": 323,
+        "another_dialog": "I think I know where the key, try to use hand to bathtub lid and you just feel grabbing something", // NULLABLE
         "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+      }
+    ]
+  },
+
+  {
+    "qid":323,
+    "question": "you found a thing inside it!",
+    "answers": [
+      {
+        "answer": "grab the key and run",
+        "next_qid": 323,
+        "another_dialog": "but suddenly Mr.Grey body is moving towards you and grab your body trying to kill you",
+        "effect": 1 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+      },
+      {
+        "answer": "take the thing slowly",
+        "next_qid": 323,
+        "another_dialog": "It's a key and you slowly make a walk back to the door and something moving \n Mr.Grey it's still alive and here you decide want to save him or leave him \n by the way you already have the key. \n TO BE CONTINUED :)",
+        "effect": 4 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   }

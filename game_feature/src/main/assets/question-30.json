@@ -1,74 +1,68 @@
 [ // Meeting Room
   {
     "qid":300,
-    "question": "check papers document?",
+    "question": "Presentation papers",
     "answers": [
       {
-        "answer": "Read",
-        "next_qid": 100,
-        "another_dialog": "there was a guy big guy that very crazy, work here, CAREFULL!!",
+        "answer": "Take a quick look on the papers",
+        "next_qid": 300,
+        "another_dialog": "it's all about a plan that they want to do to the village around here, all of these ",
         "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
-        "answer": "ripped of the paper book",
-        "next_qid": 102,
-        "another_dialog": "He used to be called the Butcher, and the one has closest relationship to Mr.Grey. He the only knows about Mr.Grey secret.", // NULLABLE
+        "answer": "Tutorials with the plan",
+        "next_qid": 301,
+        "another_dialog": "Please continue on the plan presentation", // NULLABLE
         "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "do nothing",
-        "next_qid": 101,
-        "another_dialog": "meanwhile staring at… wind blew up the candle", // NULLABLE
-        "effect": 1 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   },
 
   {
     "qid":301,
-    "question": "check the turned on computer!",
+    "question": "turned on projector",
     "answers": [
       {
-        "answer": "Press any button",
-        "next_qid": 101,
-        "another_dialog": "Computer turned on from sleep",
+        "answer": "Planning",
+        "next_qid": 301,
+        "another_dialog": "So the plan is to take the whole village and make it a land for our production for more drugs can be produce",
+        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+      },
+      {
+        "answer": "Execution",
+        "next_qid": 301,
+        "another_dialog": "We will eliminate each of villagers that brutally don't want work together with our plan", // NULLABLE
+        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+      },
+      {
+        "answer": "Production",
+        "next_qid": 301,
+        "another_dialog": "We have a new production method with the new plan and please take a look at Distribution slide", // NULLABLE
+        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+      },
+      {
+        "answer": "Distribution",
+        "next_qid": 302,
+        "another_dialog": "To distribute more of our product we can make less quality and more quality on our product so we can have different kinds of customer", // NULLABLE
         "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "read on the screen message",
-        "next_qid": 101,
-        "another_dialog": "Screen message – Don’t ever touch the computer", // NULLABLE
-        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "turned off the computer",
-        "next_qid": 101,
-        "another_dialog": "showed up new message – don’t even try to know who am I", // NULLABLE
-        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
-      },
-      {
-        "answer": "check computer desk",
-        "next_qid": 101,
-        "another_dialog": "This will be great I can use the lighter for my candle", // NULLABLE
-        "effect": 2 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   },
 
   {
     "qid":302,
-    "question": "there was bulletin board",
+    "question": "Briefcase",
     "answers": [
       {
-        "answer": "Schedule",
-        "next_qid": 102,
-        "another_dialog": "-Worker moving package from dock station to storage room \n -Professor check the things inside package and start making an experiment and producing drugs at drug lab \n -TheBoss or Butcher check all the things run smoothly and give report to Mr.Grey ",
-        "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+        "answer": "Drugs experiment tool",
+        "next_qid": 302,
+        "another_dialog": "look what I found lighter, what for? anyway I can use it for my candle",
+        "effect": 2 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       },
       {
-        "answer": "notes",
-        "next_qid": 101,
-        "another_dialog": "Check the computer for more information about how we run the works guys", // NULLABLE
+        "answer": "Experiment material",
+        "next_qid": 301,
+        "another_dialog": "interesting but it's very smelly I should read about the product", // NULLABLE
         "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
