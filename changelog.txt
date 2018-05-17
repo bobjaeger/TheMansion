@@ -106,3 +106,19 @@ Project change log:
  - update game instruction
  - finalize app
  - find bugs
+
+ +Week10
+ -Activity:
+  - Unit testing (Bobby&Dennis)
+  - Finalize UI (Bobby)
+  - Working on project document (Dennis)
+  - Game data changes (Bobby)
+  - License list and sorted (Bobby)
+  - Recording and upload to Youtube (Bobby)
+  - Readme.md update and finalize (Dennis)
+  - Publishing app to Android Marketplace (Bobby&Dennis) [publish under Dennis Android Developer account]
+ -Roadblock:
+  - Each of us having hard time to manage work on other assignment project, but we manage to have a meeting to working together finalize the game.
+ -NextPlan:
+  - Waiting for feedback from Android Marketplace if there some
+  - Working on project reflection document

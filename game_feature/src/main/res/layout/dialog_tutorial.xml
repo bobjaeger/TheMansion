@@ -50,12 +50,15 @@
                     android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="1.	The game will introduce player about the situation first and give information about the roles how to play it.\n
-2.	As the player explores the rooms, the player can take a note and collect a key item then store in in inventory if needed.\n
-3.	Exploring the special rooms will determine who is the murderer with evidence collected by the player.\n
-4.	Until the player knows who is the murder then the murder will start to hunt down the player before player gets out of the mansion.\n
-5.	If player success to escape the mansion, there will be a story scene that tells player about the story based on evidence and hint collected.\n
-6.	But If a player died in the game, the player can see the notes that written in the game to learn. The last note created by the player will be saved on the note list that accessible on the menu screen.
+                    android:text="
+1.  Player need to first their name as the game will record the times finish when player finished the game. \n
+2.  Player decide the difficulty. \n
+3.	The game will give player instruction to the player about how to play the game and how to utilize feature inside the game. \n
+4.	As the player explores the rooms, player can take a note then find the key from hint gathered. \n
+5.	There will be various rooms can be visit each level with a questions or action to do to answer. \n
+6.  The character have a life point base on story said 'candle' as their life in the game. \n
+7.	Each room have their own related question. There will be many traps to make player life point decrease. And some limited question to gain life point. \n
+8.	If the player succeed to find the key, player will get notification that player already finish the game and it will recorded base on seconds take times to finish. \n
 "
                     android:textColor="#FFFFFF"
                     android:textSize="14dp" />

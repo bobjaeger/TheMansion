@@ -16,7 +16,20 @@
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text=" \n\n\n
+        Meets the developer \n \n
+        Bobby Putra - bobbyhankam@yahoo.com \n
+        Dennis Darwis - dennisdarwis@gmail.com \n \n
+
+        This Project is a university project. But we take it more than just an assignment because \n we want to learn more what developer need to publish their app. \n \n
+
+        So please if you interesting in this project or want to give us \n feedback it will be more than welcome from us to hear what you think about our RPG game app. \n \n
+
+        You can find out project github here \n
+        https://github.com/bobjaeger/TheMansion \n \n
+
+        Thanks :)
+"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="16dp" />
