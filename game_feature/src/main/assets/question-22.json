@@ -20,7 +20,14 @@
         "next_qid": 220,
         "another_dialog": "the screen tell doesn't have signal and greyed but their is audio playing in the background talking about \n the audio said about The Mansion story and who is live inside here, the one really popular inside The Mansion is Butcher.", // NULLABLE
         "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+      },
+      {
+        "answer": "explore",
+        "next_qid": 221,
+        "another_dialog": "check surrounding room", // NULLABLE
+        "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
+
     ]
   },
 

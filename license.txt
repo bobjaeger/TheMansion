@@ -1,6 +1,6 @@
 Graphic/Visual license list:
 - Image used for: SplashScreen background edited with PS and menu background image
-  Path inside project directory:
+  Path inside project directory: /game_feature/src/main/res/drawable/
   SplashScreen named: splash1.png
   Menu background named: home_img.jpeg
   Original image file name: house-cemetery-haunted-house-house-near-the-cemetery-366282.jpeg
@@ -8,7 +8,7 @@ Graphic/Visual license list:
   License type: CC0 License
 
 - Image used for: App icon square and rounded edited with PS
-  Path inside project directory:
+  Path inside project directory: /base/src/main/res/(each inside sized format folder)
   Squared icon named: ic_launcher.png
   Rounded icon named: ic_launcher_round.png
   Original image file name: antique-architecture-dark-348688.jpg
@@ -16,24 +16,41 @@ Graphic/Visual license list:
   License type: CC0 License
 
 - Image used for: Buttons inside game
-  Path inside project directory:
+  Path inside project directory: /game_feature/src/main/res/drawable/
   Button named: back_button.jpg
   Original image file name: background-board-carpentry-301378.jpg
   Source link: https://www.pexels.com/photo/background-board-carpentry-construction-301378/
   License type: CC0 License
 
-- Image used for:
-  Path inside project directory:
-  Button named:
-  Original image file name:
-  Source link:
+- Image used for: Background image for lobby(choosing room)
+  Path inside project directory: /game_feature/src/main/res/drawable/
+  Button named: back_lobby.jpg
+  Original image file name: pexels-photo-277017.jpeg
+  Source link: https://www.pexels.com/photo/black-and-white-decision-doors-opportunity-277017/
   License type: CC0 License
 
-- Image used for:
-  Path inside project directory:
-  Button named:
-  Original image file name:
-  Source link:
+- Image used for: Background image for room(choosing answer)
+  Path inside project directory: /game_feature/src/main/res/drawable/
+  Button named: back_room.jpg
+  Original image file name: pexels-photo-695644.jpeg
+  Source link: https://www.pexels.com/photo/lighted-candle-695644/
   License type: CC0 License
 
 Audio/Sound Effect license list:
+
+License condition: unlimited user license
+For more audio license information can be found here: https://sonniss.com/gdc-bundle-license/
+
+Source link: https://sonniss.com/gdc-bundle-license/
+
+All audio file path in project directory /game_feature/src/main/res/raw
+
+1879 - Footsteps - Wooden Stairs - Down - 80 fpm - Loop = move_LVL
+Creepy Door, Fast Metal Creak_02 = room_door
+turn_page_thick_magazine_002 = open_note
+shut_small_book_002 = close_note
+Hand-to-Hand Combat - Body Hits - Body Slam Floor 08 = answer
+torch_whoosh_20 = life_minus
+Coffee, Grinder, Knob, Turn, Click X3 [+ MIX +] sm-fire-cotton-02-8040 = life_plus
+Coins_Hand_Jingle_Movement_Takes_6 = key
+whoosh_weapon_knife_swing_04 [+ MIX +] Breathe 6 = death

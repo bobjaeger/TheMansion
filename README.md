@@ -35,7 +35,7 @@ player character get hurt and lose life points..
 - The player will be given a notes to write anything that player think is an evidence to find the key.
 
 # Platform
-minimum Android 5.0(Lollipop) 
+minimum Android 5.0(Lollipop)
 
 # Repository
 https://github.com/bobjaeger/TheMansion
@@ -43,6 +43,12 @@ https://github.com/bobjaeger/TheMansion
 # Team
 Bobby Putra	SID215339949
 Dennis Darwis SID216280619
+
+# Game data directory
+- JSON data will be under this path /game_feature/src/main/assets
+- Picture/Image will be under this path /game_feature/src/main/res/drawable
+- App icon will be under this path /base/src/main/res/(inside each size format folder)
+- Audio file will be under this path /game_feature/src/main/res/raw
 
 # API References
 ### Data model classes
@@ -82,15 +88,6 @@ public RoomModel(int id, String roomName) {
 - parseRoom(): to parse the JSON room file while on LobbyInterface.
 - loadQuestionById() and loadFirstQuestion(): to parse the JSON question file while on RoomInterface.
 
-# Latest Henry comments 27/April (replied)
-- missing compile instructions and directory explanation in readme (eg where do I find your data?)
-reply: Yes we understand about that, We have many commits in this week but we still need to be done data works, we'll
-try to give all information as we can in this readme doc.
-
-# Game data directory
-- JSON data will be under this path /game_feature/src/main/assets
-- Picture/Image will be under this path /game_feature/src/main/res/drawable
-
 # Instruction to run the app in Android emulator
 - To run the app in emulator you must need to have Android Studio installed
 - And make sure you have VT-X or Intel Virtualization enabled in BIOS of your PC/Laptop
@@ -100,9 +97,10 @@ try to give all information as we can in this readme doc.
 - If you're unsure how to do it you can see the full guide how to run the app in emulator on this link
 link -https://developer.android.com/studio/run/emulator
 
-# The Mansion RPG App Game
-- The game is based on Android App. It's a game that has a rich of stories inside. We try to make the game base to fit all
-conditions for another scenario.
+# Latest Henry comments 27/April (replied)
+- missing compile instructions and directory explanation in readme (eg where do I find your data?)
+reply: Yes we understand about that, We have many commits in this week but we still need to be done data works, we'll
+try to give all information as we can in this readme doc.
 
 # Henry comments 13/April (replied)
 - You've started, which is good. reply: Thanks

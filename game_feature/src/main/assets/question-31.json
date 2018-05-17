@@ -20,6 +20,12 @@
         "next_qid": 310,
         "another_dialog": "please help me I got dragged by someone to the bathroom", // NULLABLE
         "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+      },
+      {
+        "answer": "explore",
+        "next_qid": 311,
+        "another_dialog": "check other things", // NULLABLE
+        "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   },
@@ -39,6 +45,12 @@
         "next_qid": 311,
         "another_dialog": "there is message written under the box, said MR.Grey things! please handle it with care", // NULLABLE
         "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+      },
+      {
+        "answer": "walk near to the mattress",
+        "next_qid": 312,
+        "another_dialog": "maybe I can found something there", // NULLABLE
+        "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   },
@@ -58,6 +70,12 @@
         "next_qid": 312,
         "another_dialog": "it stated for MR.Grey, 2 table per day and a cream after taking a bath", // NULLABLE
         "effect": 3 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
+      },
+      {
+        "answer": "what's that big thing!",
+        "next_qid": 313,
+        "another_dialog": "it might be a valuable things", // NULLABLE
+        "effect": 0 //1: life-1, 2: life+1, 3: room finish, 4: acquired key // NULLABLE
       }
     ]
   },
