@@ -177,12 +177,12 @@ public class LobbyInterface extends Fragment {
                         selectedFloor = 1;
                         break;
                 }
-                Log.d(TAG, "onClick: floorNumber: "+floorNumber+" selectedFloor: "+selectedFloor);
+                //Log.d(TAG, "onClick: floorNumber: "+floorNumber+" selectedFloor: "+selectedFloor);
                 if(floorNumber!=selectedFloor){
                     Utilities.playSound(getActivity(), Constants.AUDIO_MOVE_LVL);
                 }
                 floorNumber = prefs.getInt(Constants.PREFS_FLOOR_NUMBER, 1);
-                Log.d(TAG, "onClick: "+strName);
+                //Log.d(TAG, "onClick: "+strName);
                 parseRoom();
                 dialog.dismiss();
             }
@@ -194,7 +194,7 @@ public class LobbyInterface extends Fragment {
         Game.currentFragment = Constants.FRAGMENT_ROOM;
         int id = roomModel.getId();
         String roomName = roomModel.getRoomName();
-        Log.d(TAG, "toRoomInterface: "+id);
+        //Log.d(TAG, "toRoomInterface: "+id);
         roomSet.add(String.valueOf(id));
         prefs.edit().putStringSet(Constants.PREFS_ROOM_SET, roomSet).commit();
 

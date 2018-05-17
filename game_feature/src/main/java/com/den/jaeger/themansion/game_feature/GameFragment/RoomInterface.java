@@ -134,9 +134,9 @@ public class RoomInterface extends Fragment {
 
         List<AnswerModel> answerModelList = currentQuestion.getAnswerLists();
         AnswerModel answerModel = answerModelList.get(i);
-        Log.d(TAG, "selectAnswer: "+answerModel.getAnswer());
+        //Log.d(TAG, "selectAnswer: "+answerModel.getAnswer());
         int nextQid = answerModel.getNextQid();
-        Log.d(TAG, "selectAnswer: nextQid: "+nextQid);
+        //Log.d(TAG, "selectAnswer: nextQid: "+nextQid);
         String anotherDialog = answerModel.getAnotherDialog();
         final int effect = answerModel.getEffect();
         if(!anotherDialog.isEmpty()){
@@ -211,7 +211,7 @@ public class RoomInterface extends Fragment {
                 alertDialog.show();
                 break;
         }
-        Log.d(TAG, "selectAnswer: "+visitedQuestion+", "+currentQuestion.getQid());
+        //Log.d(TAG, "selectAnswer: "+visitedQuestion+", "+currentQuestion.getQid());
     }
 
     private void increaseLife() {
@@ -364,7 +364,7 @@ public class RoomInterface extends Fragment {
         answer4.setVisibility(View.INVISIBLE);
         for(int i=0; currentQuestion.getAnswerLists().size()>i; i++){
             AnswerModel answerModel = answerModelList.get(i);
-            Log.d(TAG, "parseQuestion: "+i);
+            //Log.d(TAG, "parseQuestion: "+i);
             switch(i){
                 case 0:
                     answer1.setVisibility(View.VISIBLE);

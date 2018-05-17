@@ -79,7 +79,7 @@ public class Utilities {
     public static void startGame(Activity activity){
         SharedPreferences prefs =  activity.getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
         Date currentTime = Calendar.getInstance().getTime();
-        Log.d(TAG, "startGame: "+currentTime.getTime());
+        //Log.d(TAG, "startGame: "+currentTime.getTime());
         prefs.edit().putLong(Constants.PREFS_TIME_START, currentTime.getTime()).commit();
     }
 
@@ -90,7 +90,7 @@ public class Utilities {
         long endTime = Calendar.getInstance().getTime().getTime();
         long startTime = prefs.getLong(Constants.PREFS_TIME_START, 0);
         int secondsDifference = (int) TimeUnit.MILLISECONDS.toSeconds(endTime-startTime);
-        Log.d(TAG, "endGame: "+secondsDifference+" seconds");
+        //Log.d(TAG, "endGame: "+secondsDifference+" seconds");
 
         DBHighScore dbHighScore = new DBHighScore(activity);
         dbHighScore.addHighScore(new HighScoreModel(name, secondsDifference));
@@ -110,7 +110,7 @@ public class Utilities {
                 }
             });
         } else{
-            Log.d(TAG, "showAlertDialog: exit");
+            //Log.d(TAG, "showAlertDialog: exit");
             builder.setPositiveButton("OK", clickListener);
         }
 
@@ -151,6 +151,6 @@ public class Utilities {
         MediaPlayer mp = MediaPlayer.create(activity, audio);
         mp.setLooping(false);
         mp.start();
-        Log.d(TAG, "playSound: audio played");
+        //Log.d(TAG, "playSound: audio played");
     }
 }

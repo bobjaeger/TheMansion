@@ -48,7 +48,7 @@ public class Game extends AppCompatActivity {
     private void readJSON() {
         try {
             JSONObject jsonObject = new JSONObject(Utilities.loadJSONFromAsset(this, Constants.JSON_LEVELS_ROOM));
-            Log.d(TAG, "readJSON: "+jsonObject);
+            //Log.d(TAG, "readJSON: "+jsonObject);
         } catch (JSONException e) {
             e.printStackTrace();
         }
