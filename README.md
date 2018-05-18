@@ -97,6 +97,9 @@ public RoomModel(int id, String roomName) {
 - If you're unsure how to do it you can see the full guide how to run the app in emulator on this link
 link -https://developer.android.com/studio/run/emulator
 
+# License
+- All the license for visual and audio we use can be found in the project main directory there was notepad called license.txt
+
 # Latest Henry comments 27/April (replied)
 - missing compile instructions and directory explanation in readme (eg where do I find your data?)
 reply: Yes we understand about that, We have many commits in this week but we still need to be done data works, we'll
